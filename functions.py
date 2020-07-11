@@ -1,13 +1,26 @@
 import dateutil.parser
 import requests
 import time, os
+import re
+
+from bs4 import BeautifulSoup
+from urllib.parse import urljoin
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+chromedriver = "/usr/bin/chromedriver" # path to the chromedriver executable
+os.environ["webdriver.chrome.driver"] = chromedriver
 
 def money_to_int(moneystring):
-    moneystring = moneystring.replace('$', '').replace(',', '')
+    if type(moneystring) != 'float':
+        moneystring = moneystring.replace('$', '').replace(',', '')
     return int(moneystring)
 
 def runtime_to_minutes(runtimestring):
-    if type(runtimestring) != 'NoneType':
+    if runtimestring != None:
         runtime = runtimestring.split()
     try:
         minutes = int(runtime[0])*60 + int(runtime[2])
@@ -119,7 +132,79 @@ def get_movie_dict(link):
 
     return movie_dict
 
+def get_selenium_dict(driver):
 
+    current_url = driver.current_url
+    print(current_url)
+    response = requests.get(current_url)
+    page = response.text
+    soup = BeautifulSoup(page,"lxml")
+    print(soup.prettify())
+
+    headers = ['movie_title', 'domestic_total_gross',
+               'runtime_minutes', 'rating', 'release_date', 'budget']
+
+    #Get title
+    title_string = soup.find('title').text
+    title = title_string.split('-')[0].strip()
+
+    print(title)
+    print('HERES THE TITLE -------------------------------------------------------')
+
+    #Get domestic gross
+    try:
+        raw_domestic_total_gross = (soup.find(class_='mojo-performance-summary-table')
+                                    .find_all('span', class_='money')[0]
+                                    .text
+                               )
+        print(raw_domestic_total_gross)
+    except:
+        raw_domestic_total_gross = float("NaN")
+        print('twas NaN')
+
+    if raw_domestic_total_gross == None or type(raw_domestic_total_gross):
+        print('This is NaN')
+        domestic_total_gross = float("NaN")
+    else:
+        domestic_total_gross = money_to_int(raw_domestic_total_gross)
+        print('twas NaN')
+    #Get runtime
+    raw_runtime = get_movie_value(soup,'Running')
+    print(raw_runtime)
+    if type(raw_runtime) != 'float' and raw_runtime != None:
+        runtime = runtime_to_minutes(raw_runtime)
+
+    #Get rating
+    rating = get_movie_value(soup,'MPAA')
+
+    #Get release date
+    if '-' in get_movie_value(soup, 'Release Date'):
+        raw_release_date = get_movie_value(soup,'Release Date').split('-')[0]
+    elif '(' in get_movie_value(soup, 'Release Date'):
+        raw_release_date = get_movie_value(soup,'Release Date').split('(')[0]
+    else:
+        raw_release_date = get_movie_value(soup,'Release Date').split('(')[0]
+    # release_date = to_date(raw_release_date)
+    release_date = raw_release_date
+
+
+    # Get budget alt
+    raw_budget = get_movie_value(soup,'Budget')
+    print(raw_budget)
+    if type(raw_budget) == 'int':
+        budget = money_to_int(raw_budget)
+    else:
+        budget = 0
+
+    #Create movie dictionary and return
+    movie_dict = dict(zip(headers,[title,
+                                domestic_total_gross,
+                                runtime,
+                                rating,
+                                release_date,
+                                budget]))
+
+    return movie_dict
 
 def get_movie_dict2(link):
 
