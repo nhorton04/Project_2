@@ -152,21 +152,18 @@ def get_selenium_dict(driver):
                                     .find_all('span', class_='money')[0]
                                     .text
                                )
-        print(raw_domestic_total_gross)
+
     except:
         raw_domestic_total_gross = float("NaN")
-        print('twas NaN')
+
 
     if raw_domestic_total_gross == None:
-        print('This is NaN')
-        print(raw_domestic_total_gross)
         domestic_total_gross = float("NaN")
     else:
         domestic_total_gross = money_to_int(raw_domestic_total_gross)
 
     #Get runtime
     raw_runtime = get_movie_value(soup,'Running')
-    print(raw_runtime)
     if type(raw_runtime) != 'float' and raw_runtime != None:
         runtime = runtime_to_minutes(raw_runtime)
 
@@ -196,8 +193,6 @@ def get_selenium_dict(driver):
         raw_budget = next_element.text
     else:
         raw_budget = None
-
-    print(raw_budget)
     if raw_budget != None:
         budget = money_to_int(raw_budget)
     else:
