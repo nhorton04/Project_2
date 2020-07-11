@@ -135,11 +135,9 @@ def get_movie_dict(link):
 def get_selenium_dict(driver):
 
     current_url = driver.current_url
-    print(current_url)
     response = requests.get(current_url)
     page = response.text
     soup = BeautifulSoup(page,"lxml")
-    print(soup.prettify())
 
     headers = ['movie_title', 'domestic_total_gross',
                'runtime_minutes', 'rating', 'release_date', 'budget']
@@ -147,9 +145,6 @@ def get_selenium_dict(driver):
     #Get title
     title_string = soup.find('title').text
     title = title_string.split('-')[0].strip()
-
-    print(title)
-    print('HERES THE TITLE -------------------------------------------------------')
 
     #Get domestic gross
     try:
@@ -162,12 +157,13 @@ def get_selenium_dict(driver):
         raw_domestic_total_gross = float("NaN")
         print('twas NaN')
 
-    if raw_domestic_total_gross == None or type(raw_domestic_total_gross):
+    if raw_domestic_total_gross == None:
         print('This is NaN')
+        print(raw_domestic_total_gross)
         domestic_total_gross = float("NaN")
     else:
         domestic_total_gross = money_to_int(raw_domestic_total_gross)
-        print('twas NaN')
+
     #Get runtime
     raw_runtime = get_movie_value(soup,'Running')
     print(raw_runtime)
@@ -189,9 +185,20 @@ def get_selenium_dict(driver):
 
 
     # Get budget alt
-    raw_budget = get_movie_value(soup,'Budget')
+
+    obj = soup.find(text=re.compile('Budget'))
+    if not obj:
+        obj = None
+
+    # this works for most of the values
+    next_element = obj.findNext()
+    if next_element:
+        raw_budget = next_element.text
+    else:
+        raw_budget = None
+
     print(raw_budget)
-    if type(raw_budget) == 'int':
+    if raw_budget != None:
         budget = money_to_int(raw_budget)
     else:
         budget = 0
