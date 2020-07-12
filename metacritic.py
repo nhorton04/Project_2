@@ -1,3 +1,44 @@
+from bs4 import BeautifulSoup
+import requests
+import time, os
+import pandas as pd
+import re
+import seaborn as sns
+import matplotlib.pyplot as plt
+import functions
+import random
+import numpy as np
+import metacritic
+import movies
+
+from urllib.parse import urljoin
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import StaleElementReferenceException
+from selenium.common.exceptions import ElementClickInterceptedException
+from selenium.common.exceptions import ElementNotInteractableException
+
+chromedriver = "/usr/bin/chromedriver" # path to the chromedriver executable
+os.environ["webdriver.chrome.driver"] = chromedriver
+url = 'https://www.metacritic.com/'
+
+
+def find_metascore():
+    try:
+        driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[3]/div[1]/ul/li[1]/div/div[2]/div/h3/a').click()
+        time.sleep((3.1+2*random.random()))
+        metascore = driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[2]/table/tbody/tr/td[2]/a/span').text
+        if any(char.isdigit() for char in metascore):
+            metascores.append(int(''.join(filter(str.isdigit, metascore))))
+        else:
+            metascores.append('No score')
+    except:
+        print('metascore not found')
+
 def critique(movie_titles):
     metascores = []
     audience_scores = []
@@ -23,11 +64,6 @@ def critique(movie_titles):
             print('no movies button to click')
             pass
         try:
-            driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[3]/div[1]/ul/li[1]/div/div[2]/div/h3/a').click()
-            time.sleep((3.1+2*random.random()))
-            metascore = driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[2]/table/tbody/tr/td[2]/a/span').text
-            if any(char.isdigit() for char in metascore):
-                metascores.append(int(''.join(filter(str.isdigit, metascore))))
                 time.sleep((3.4+2*random.random()))
                 audience_score = driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[3]/div/table/tbody/tr/td[2]/a/span').text
                 audience_scores.append(float(''.join(filter(str.isdigit, audience_score))))
