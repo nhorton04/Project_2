@@ -15,7 +15,7 @@ chromedriver = "/usr/bin/chromedriver" # path to the chromedriver executable
 os.environ["webdriver.chrome.driver"] = chromedriver
 
 def money_to_int(moneystring):
-    if type(moneystring) != 'float':
+    if type(moneystring) != float:
         moneystring = moneystring.replace('$', '').replace(',', '')
     return int(moneystring)
 
@@ -145,7 +145,7 @@ def get_selenium_dict(driver):
     #Get title
     title_string = soup.find('title').text
     title = title_string.split('-')[0].strip()
-
+    print('Title: {}'.format(title))
     #Get domestic gross
     try:
         raw_domestic_total_gross = (soup.find(class_='mojo-performance-summary-table')
@@ -156,20 +156,24 @@ def get_selenium_dict(driver):
     except:
         raw_domestic_total_gross = float("NaN")
 
-
-    if raw_domestic_total_gross == None:
+    print('Raw gross: {}'.format(raw_domestic_total_gross))
+    if raw_domestic_total_gross == None or type(raw_domestic_total_gross) == float:
         domestic_total_gross = float("NaN")
     else:
         domestic_total_gross = money_to_int(raw_domestic_total_gross)
 
+    print('Gross gross: {}'.format(domestic_total_gross))
     #Get runtime
     raw_runtime = get_movie_value(soup,'Running')
-    if type(raw_runtime) != 'float' and raw_runtime != None:
+    if type(raw_runtime) != float and raw_runtime != None:
         runtime = runtime_to_minutes(raw_runtime)
-
+        print('Runtime: {}'.format(runtime))
+    else:
+        print(f'No runtime. But raw runtime: {raw_runtime}')
+        runtime = raw_runtime
     #Get rating
     rating = get_movie_value(soup,'MPAA')
-
+    print(f'Rating: {rating}')
     #Get release date
     if '-' in get_movie_value(soup, 'Release Date'):
         raw_release_date = get_movie_value(soup,'Release Date').split('-')[0]
@@ -179,7 +183,7 @@ def get_selenium_dict(driver):
         raw_release_date = get_movie_value(soup,'Release Date').split('(')[0]
     # release_date = to_date(raw_release_date)
     release_date = raw_release_date
-
+    print(f'Release Date: {release_date}')
 
     # Get budget alt
 
@@ -188,7 +192,10 @@ def get_selenium_dict(driver):
         obj = None
 
     # this works for most of the values
-    next_element = obj.findNext()
+    if obj:
+        next_element = obj.findNext()
+    else:
+        next_element=None
     if next_element:
         raw_budget = next_element.text
     else:
@@ -197,7 +204,7 @@ def get_selenium_dict(driver):
         budget = money_to_int(raw_budget)
     else:
         budget = 0
-
+    print(f'Budget: {budget}')
     #Create movie dictionary and return
     movie_dict = dict(zip(headers,[title,
                                 domestic_total_gross,
@@ -205,7 +212,7 @@ def get_selenium_dict(driver):
                                 rating,
                                 release_date,
                                 budget]))
-
+    print(movie_dict)
     return movie_dict
 
 def get_movie_dict2(link):
