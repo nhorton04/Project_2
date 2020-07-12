@@ -41,17 +41,15 @@ def metacritic(titles):
         check_links(driver)
 
 
-        scores['metascores'] += get_score('//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[2]/table/tbody/tr/td[2]/a/span')
+        scores['metascores'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[2]/table/tbody/tr/td[2]/a/span')]
         time.sleep((3.3+2*random.random()))
-        scores['audience_scores'] += get_score('//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[3]/div/table/tbody/tr/td[2]/a/span')
+        scores['audience_scores'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[3]/div/table/tbody/tr/td[2]/a/span')]
         time.sleep((3.3+2*random.random()))
-        scores['critic_count'] += get_score('//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[2]/table/tbody/tr/td[1]/div[2]/span/a/span[2]')
+        scores['critic_count'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[2]/table/tbody/tr/td[1]/div[2]/span/a/span[2]')]
         time.sleep((3.3+2*random.random()))
-        scores['num_audience_ratings'] += get_score('//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[3]/div/table/tbody/tr/td[1]/div[2]/span/a/span[2]')
+        scores['num_audience_ratings'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[3]/div/table/tbody/tr/td[1]/div[2]/span/a/span[2]')]
 
-        print('naw')
         print(scores['metascores'], scores['audience_scores'], scores['critic_count'], scores['num_audience_ratings'])
-        print('phan')
         driver.close()
 
 def perform_search(title, driver):
@@ -68,22 +66,29 @@ def filter_by_movies(driver):
     time.sleep(2)
     driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[2]/div/div[2]/a/span[1]').click()
 
-def get_score(xpath):
-    try:
-        score.driver.find_element_by_xpath(xpath).text
-        time.sleep(2)
-        if any(char.isdigit() for char in score):
-            print(score)
-            print(int(''.join(filter(str.isdigit, score))))
-            return int(''.join(filter(str.isdigit, score)))
-        else:
-            print("DIDNT WORK _______")
-            print(score)
-            print(int(''.join(filter(str.isdigit, score))))
-            return 'No score'
-    except:
-        return 'No score'
+def is_valid_score(score):
+    return bool(any(char.isdigit() for char in score))
 
+# def get_score(driver, xpath):
+#     score = driver.find_element_by_xpath(xpath).text
+#     time.sleep(2)
+#     if any(char.isdigit() for char in score):
+#         print(score)
+#         print(int(''.join(filter(str.isdigit, score))))
+#         return int(''.join(filter(str.isdigit, score)))
+#     else:
+#         print("DIDNT WORK _______")
+#         print(score)
+#         print(int(''.join(filter(str.isdigit, score))))
+#         return 'No score'
+
+def get_score(driver, xpath):
+    time.sleep(2)
+    score = driver.find_element_by_xpath(xpath).text
+    if any(char.isdigit() for char in score):
+        return score
+    else:
+        return 'No score'
 
 
 def check_links(driver):
@@ -91,15 +96,13 @@ def check_links(driver):
     score = driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[3]/div[1]/ul/li[1]/div/div[2]/div/span').text
     time.sleep(1)
     #If it has a valid metascore, click on the link
-    if get_score(score) != 'No score':
+    if is_valid_score(score):
         driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[3]/div[1]/ul/li[1]/div/div[2]/div/h3/a').click()
     else:
         score = driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[3]/div[1]/ul/li[2]/div/div[2]/div/span').text
         #If it has a valid metascore, click on the link
-        if get_score(score) != 'No score':
+        if is_valid_score(score):
             time.sleep((3.3+2*random.random()))
             driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[3]/div[1]/ul/li[2]/div/div[2]/div/h3/a').click()
-
-
 
 # //*[@id="main_content"]/div[1]/div[3]/div[1]/ul/li[1]/div/div[2]/div/h3/a
