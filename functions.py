@@ -29,7 +29,10 @@ def runtime_to_minutes(runtimestring):
         return None
 
 def to_date(datestring):
-    date = dateutil.parser.parse(datestring)
+    if datestring:
+        date = dateutil.parser.parse(datestring)
+    else:
+        date = None
     return date
 
 def get_movie_value(soup, field_name):
@@ -132,70 +135,69 @@ def get_movie_dict(link):
 
     return movie_dict
 
-def get_selenium_dict(driver):
+def magic_movie_title(title):
+    words = title.split(' ')
+    return "%20".join(words)
 
+def get_selenium_dict(driver):
     current_url = driver.current_url
     response = requests.get(current_url)
     page = response.text
     soup = BeautifulSoup(page,"lxml")
-
     headers = ['movie_title', 'domestic_total_gross',
-               'runtime_minutes', 'rating', 'release_date', 'budget']
+               'runtime_minutes', 'rating', 'budget']
 
     #Get title
     title_string = soup.find('title').text
     title = title_string.split('-')[0].strip()
-    print('Title: {}'.format(title))
+
     #Get domestic gross
     try:
         raw_domestic_total_gross = (soup.find(class_='mojo-performance-summary-table')
                                     .find_all('span', class_='money')[0]
                                     .text
                                )
-
     except:
         raw_domestic_total_gross = float("NaN")
 
-    print('Raw gross: {}'.format(raw_domestic_total_gross))
     if raw_domestic_total_gross == None or type(raw_domestic_total_gross) == float:
         domestic_total_gross = float("NaN")
     else:
         domestic_total_gross = money_to_int(raw_domestic_total_gross)
 
-    print('Gross gross: {}'.format(domestic_total_gross))
     #Get runtime
     raw_runtime = get_movie_value(soup,'Running')
     if type(raw_runtime) != float and raw_runtime != None:
         runtime = runtime_to_minutes(raw_runtime)
-        print('Runtime: {}'.format(runtime))
     else:
-        print(f'No runtime. But raw runtime: {raw_runtime}')
         runtime = raw_runtime
+
     #Get rating
     rating = get_movie_value(soup,'MPAA')
-    print(f'Rating: {rating}')
+
     #Get release date
-    if '-' in get_movie_value(soup, 'Release Date'):
-        raw_release_date = get_movie_value(soup,'Release Date').split('-')[0]
-    elif '(' in get_movie_value(soup, 'Release Date'):
-        raw_release_date = get_movie_value(soup,'Release Date').split('(')[0]
-    else:
-        raw_release_date = get_movie_value(soup,'Release Date').split('(')[0]
+
+    # try:
+    #     raw_release_date
+    #     if '-' in get_movie_value(soup, 'Release Date'):
+    #         raw_release_date = get_movie_value(soup,'Release Date').split('-')[0]
+    #     elif '(' in get_movie_value(soup, 'Release Date'):
+    #         raw_release_date = get_movie_value(soup,'Release Date').split('(')[0]
+    #     elif '\n' in get_movie_value(soup, 'Release Date'):
+    #         raw_release_date = get_movie_value(soup,'Release Date').split('\n')[0]
+    # except:
+    #     raw_release_date = None
+    #
     # release_date = to_date(raw_release_date)
-    release_date = raw_release_date
-    print(f'Release Date: {release_date}')
 
     # Get budget alt
-
     obj = soup.find(text=re.compile('Budget'))
     if not obj:
         obj = None
-
-    # this works for most of the values
     if obj:
         next_element = obj.findNext()
     else:
-        next_element=None
+        next_element = None
     if next_element:
         raw_budget = next_element.text
     else:
@@ -204,13 +206,12 @@ def get_selenium_dict(driver):
         budget = money_to_int(raw_budget)
     else:
         budget = 0
-    print(f'Budget: {budget}')
+
     #Create movie dictionary and return
     movie_dict = dict(zip(headers,[title,
                                 domestic_total_gross,
                                 runtime,
                                 rating,
-                                release_date,
                                 budget]))
     print(movie_dict)
     return movie_dict
