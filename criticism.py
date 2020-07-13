@@ -41,63 +41,78 @@ url = 'https://www.metacritic.com/'
 # options.add_argument("--disable-features=VizDisplayCompositor") #super necessary for windows linux subsystem
 
 def metacritic(titles):
-    scores = {'metascores': [], 'audience_scores': [], 'critic_count': [], 'num_audience_ratings': []}
+    i = 0
+    while i < 264:
+        scores = {'metascores': [], 'audience_scores': [], 'critic_count': [], 'num_audience_ratings': []}
 
-    for title in titles:
-        # Open selenium browser
-        driver = webdriver.Chrome(chromedriver)
-        driver.get(url)
+        for title in titles[i:]:
+            # Open selenium browser
+            driver = webdriver.Chrome(chromedriver)
+            driver.get(url)
 
-        #Search for current movie title
-        perform_search(title, driver)
-        time.sleep((3.1+2*random.random()))
-        WebDriverWait(driver, 10)
-        filter_by_movies(driver)
-        #Check the first and second links to see if metascore is valid. If so, click on it.
-        check_links(driver)
-
-        try:
-            scores['metascores'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[2]/table/tbody/tr/td[2]/a/span')]
+            #Search for current movie title
+            perform_search(title, driver)
             time.sleep((3.1+2*random.random()))
             WebDriverWait(driver, 10)
-        except:
+            filter_by_movies(driver)
+            #Check the first and second links to see if metascore is valid. If so, click on it.
+            check_links(driver)
+
             try:
-                scores['metascores'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/div/div[2]/div/table/tbody/tr/td[2]/a/span')]
+                scores['metascores'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[2]/table/tbody/tr/td[2]/a/span')]
                 time.sleep((3.1+2*random.random()))
                 WebDriverWait(driver, 10)
+                i += 1
             except:
-                scores['metascores'] += ['No score']
-        try:
-            scores['audience_scores'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[3]/div/table/tbody/tr/td[2]/a/span')]
-            time.sleep((3.1+2*random.random()))
-            WebDriverWait(driver, 10)
-        except:
+                try:
+                    scores['metascores'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/div/div[2]/div/table/tbody/tr/td[2]/a/span')]
+                    time.sleep((3.1+2*random.random()))
+                    WebDriverWait(driver, 10)
+                    i += 1
+                except:
+                    scores['metascores'] += ['No score']
+                    i += 1
             try:
-                scores['audience_scores'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/div/div[4]/div[1]/div/table/tbody/tr/td[2]/a/span')]
+                scores['audience_scores'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[3]/div/table/tbody/tr/td[2]/a/span')]
                 time.sleep((3.1+2*random.random()))
                 WebDriverWait(driver, 10)
+                i += 1
             except:
-                scores['audience_scores'] += ['No score']
-        try:
-            scores['critic_count'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[2]/table/tbody/tr/td[1]/div[2]/span/a/span[2]')]
-            time.sleep((3.1+2*random.random()))
-            WebDriverWait(driver, 10)
-        except:
+                try:
+                    scores['audience_scores'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/div/div[4]/div[1]/div/table/tbody/tr/td[2]/a/span')]
+                    time.sleep((3.1+2*random.random()))
+                    WebDriverWait(driver, 10)
+                    i += 1
+                except:
+                    scores['audience_scores'] += ['No score']
+                    i += 1
             try:
-                scores['critic_count'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/div/div[2]/div/table/tbody/tr/td[1]/div[2]/span/a/span[2]')]
+                scores['critic_count'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[2]/table/tbody/tr/td[1]/div[2]/span/a/span[2]')]
                 time.sleep((3.1+2*random.random()))
                 WebDriverWait(driver, 10)
+                i += 1
             except:
-                scores['critic_count'] += ['No critics']
-        try:
-            scores['num_audience_ratings'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[3]/div/table/tbody/tr/td[1]/div[2]/span/a/span[2]')]
-        except:
+                try:
+                    scores['critic_count'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/div/div[2]/div/table/tbody/tr/td[1]/div[2]/span/a/span[2]')]
+                    time.sleep((3.1+2*random.random()))
+                    WebDriverWait(driver, 10)
+                    i += 1
+                except:
+                    scores['critic_count'] += ['No critics']
+                    i += 1
             try:
-                scores['num_audience_ratings'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/div/div[4]/div[1]/div/table/tbody/tr/td[1]/div[2]/span/a/span[2]')]
+                scores['num_audience_ratings'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]/div/div/div[3]/div/table/tbody/tr/td[1]/div[2]/span/a/span[2]')]
+                i += 1
             except:
-                scores['num_audience_ratings'] += ['No ratings']
-        print(scores['metascores'], scores['audience_scores'], scores['critic_count'], scores['num_audience_ratings'])
-        driver.close()
+                try:
+                    scores['num_audience_ratings'] += [get_score(driver, '//*[@id="main_content"]/div[1]/div[1]/div/div/div[4]/div[1]/div/table/tbody/tr/td[1]/div[2]/span/a/span[2]')]
+                    i += 1
+                except:
+                    scores['num_audience_ratings'] += ['No ratings']
+                    i += 1
+            print(scores['metascores'], scores['audience_scores'], scores['critic_count'], scores['num_audience_ratings'])
+            i += 1
+            driver.close()
 
 def perform_search(title, driver):
     # Enter title into search box, press enter
@@ -117,10 +132,12 @@ def strip_movies(scores):
     pass
 
 def filter_by_movies(driver):
-    time.sleep((3.1+2*random.random()))
-    WebDriverWait(driver, 10)
-    driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[2]/div/div[2]/a/span[1]').click()
-
+    try:
+        time.sleep((3.1+2*random.random()))
+        WebDriverWait(driver, 10)
+        driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[2]/div/div[2]/a/span[1]').click()
+    except NoSuchElementException:
+        pass
 def is_valid_score(score):
     return bool(any(char.isdigit() for char in score))
 
@@ -148,19 +165,22 @@ def get_score(driver, xpath):
 
 
 def check_links(driver):
-    # Check if first result has a valid metascore
-    score = driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[3]/div[1]/ul/li[1]/div/div[2]/div/span').text
-    time.sleep((3.1+2*random.random()))
-    WebDriverWait(driver, 10)
-    #If it has a valid metascore, click on the link
-    if is_valid_score(score):
-        driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[3]/div[1]/ul/li[1]/div/div[2]/div/h3/a').click()
-    else:
-        score = driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[3]/div[1]/ul/li[2]/div/div[2]/div/span').text
+    try:
+        # Check if first result has a valid metascore
+        score = driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[3]/div[1]/ul/li[1]/div/div[2]/div/span').text
+        time.sleep((3.1+2*random.random()))
+        WebDriverWait(driver, 10)
         #If it has a valid metascore, click on the link
         if is_valid_score(score):
-            time.sleep((3.1+2*random.random()))
-            WebDriverWait(driver, 10)
-            driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[3]/div[1]/ul/li[2]/div/div[2]/div/h3/a').click()
-
+            driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[3]/div[1]/ul/li[1]/div/div[2]/div/h3/a').click()
+        else:
+            score = driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[3]/div[1]/ul/li[2]/div/div[2]/div/span').text
+            #If it has a valid metascore, click on the link
+            if is_valid_score(score):
+                time.sleep((3.1+2*random.random()))
+                WebDriverWait(driver, 10)
+                driver.find_element_by_xpath('//*[@id="main_content"]/div[1]/div[3]/div[1]/ul/li[2]/div/div[2]/div/h3/a').click()
+    except NoSuchElementException:
+        print('no score! skip this one')
+        pass
 # //*[@id="main_content"]/div[1]/div[3]/div[1]/ul/li[1]/div/div[2]/div/h3/a
