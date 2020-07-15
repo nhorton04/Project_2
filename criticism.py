@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import functions
 import random
 import numpy as np
-import movies
+import movies_2020
 
 from urllib.parse import urljoin
 from selenium import webdriver
@@ -21,33 +21,36 @@ from selenium.common.exceptions import StaleElementReferenceException
 from selenium.common.exceptions import ElementClickInterceptedException
 from selenium.common.exceptions import ElementNotInteractableException
 # from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.chrome.options import Options
 
 chromedriver = "/usr/bin/chromedriver" # path to the chromedriver executable
 os.environ["webdriver.chrome.driver"] = chromedriver
 url = 'https://www.metacritic.com/'
 
+
+
 # capabilities = DesiredCapabilities().CHROME
 # capabilities["pageLoadStrategy"] = "none"
 #
-# options = webdriver.ChromeOptions()
+options = webdriver.ChromeOptions()
 # options.add_argument("--start-maximized")
-# options.add_argument("--enable-automation")
+options.add_argument("--enable-automation")
 # options.add_argument("--no-sandbox")
-# options.add_argument("--headless")
+options.add_argument("--headless")
 # #     options.add_argument("--disable-infobars") #dqn cause errors
 # options.add_argument("--disable-dev-shm-usage")
 # options.add_argument("--disable-browser-side-navigation")
-# options.add_argument("--disable-gpu")
-# options.add_argument("--disable-features=VizDisplayCompositor") #super necessary for windows linux subsystem
+options.add_argument("--disable-gpu")
+options.add_argument("--disable-features=VizDisplayCompositor") #super necessary for windows linux subsystem
 
 def metacritic(titles):
     i = 0
-    while i < 264:
+    while i < 1000:
         scores = {'metascores': [], 'audience_scores': [], 'critic_count': [], 'num_audience_ratings': []}
 
         for title in titles[i:]:
             # Open selenium browser
-            driver = webdriver.Chrome(chromedriver)
+            driver = webdriver.Chrome(chromedriver, chrome_options=options)
             driver.get(url)
 
             #Search for current movie title
@@ -135,18 +138,6 @@ def filter_by_movies(driver):
 def is_valid_score(score):
     return bool(any(char.isdigit() for char in score))
 
-# def get_score(driver, xpath):
-#     score = driver.find_element_by_xpath(xpath).text
-#     time.sleep((3.1+2*random.random()))
-#     if any(char.isdigit() for char in score):
-#         print(score)
-#         print(int(''.join(filter(str.isdigit, score))))
-#         return int(''.join(filter(str.isdigit, score)))
-#     else:
-#         print("DIDNT WORK _______")
-#         print(score)
-#         print(int(''.join(filter(str.isdigit, score))))
-#         return 'No score'
 
 def get_score(driver, xpath):
     time.sleep((1.5+2*random.random()))

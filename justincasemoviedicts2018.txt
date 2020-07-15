@@ -1,0 +1,534 @@
+moviedicts_2018 = """{'movie_title': 'Black Panther', 'domestic_total_gross': 700059566, 'runtime_minutes': 134, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Black Panther', 'domestic_total_gross': 700059566, 'runtime_minutes': 134, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Avengers: Infinity War', 'domestic_total_gross': 678815482, 'runtime_minutes': 149, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Avengers: Infinity War', 'domestic_total_gross': 678815482, 'runtime_minutes': 149, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Incredibles 2', 'domestic_total_gross': 608581744, 'runtime_minutes': 118, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Incredibles 2', 'domestic_total_gross': 608581744, 'runtime_minutes': 118, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Jurassic World: Fallen Kingdom', 'domestic_total_gross': 417719760, 'runtime_minutes': 128, 'rating': 'PG-13', 'budget': 170000000}
+{'movie_title': 'Jurassic World: Fallen Kingdom', 'domestic_total_gross': 417719760, 'runtime_minutes': 128, 'rating': 'PG-13', 'budget': 170000000}
+{'movie_title': 'Deadpool 2', 'domestic_total_gross': 318491426, 'runtime_minutes': 119, 'rating': 'R', 'budget': 110000000}
+{'movie_title': 'Deadpool 2', 'domestic_total_gross': 318491426, 'runtime_minutes': 119, 'rating': 'R', 'budget': 110000000}
+{'movie_title': 'The Grinch', 'domestic_total_gross': 270620950, 'runtime_minutes': 85, 'rating': 'PG', 'budget': 75000000}
+{'movie_title': 'The Grinch', 'domestic_total_gross': 270620950, 'runtime_minutes': 85, 'rating': 'PG', 'budget': 75000000}
+{'movie_title': 'Jumanji: Welcome to the Jungle', 'domestic_total_gross': 404515480, 'runtime_minutes': 119, 'rating': 'PG-13', 'budget': 90000000}
+{'movie_title': 'Jumanji: Welcome to the Jungle', 'domestic_total_gross': 404515480, 'runtime_minutes': 119, 'rating': 'PG-13', 'budget': 90000000}
+{'movie_title': 'Mission: Impossible', 'domestic_total_gross': 220159104, 'runtime_minutes': 147, 'rating': 'PG-13', 'budget': 178000000}
+{'movie_title': 'Mission: Impossible', 'domestic_total_gross': 220159104, 'runtime_minutes': 147, 'rating': 'PG-13', 'budget': 178000000}
+{'movie_title': 'Ant', 'domestic_total_gross': 216648740, 'runtime_minutes': 118, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Ant', 'domestic_total_gross': 216648740, 'runtime_minutes': 118, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Solo: A Star Wars Story', 'domestic_total_gross': 213767512, 'runtime_minutes': 135, 'rating': 'PG-13', 'budget': 275000000}
+{'movie_title': 'Solo: A Star Wars Story', 'domestic_total_gross': 213767512, 'runtime_minutes': 135, 'rating': 'PG-13', 'budget': 275000000}
+{'movie_title': 'Venom', 'domestic_total_gross': 213515506, 'runtime_minutes': 112, 'rating': 'PG-13', 'budget': 100000000}
+{'movie_title': 'Venom', 'domestic_total_gross': 213515506, 'runtime_minutes': 112, 'rating': 'PG-13', 'budget': 100000000}
+{'movie_title': 'A Star Is Born', 'domestic_total_gross': 215288866, 'runtime_minutes': 136, 'rating': 'R', 'budget': 36000000}
+{'movie_title': 'A Star Is Born', 'domestic_total_gross': 215288866, 'runtime_minutes': 136, 'rating': 'R', 'budget': 36000000}
+{'movie_title': 'Aquaman', 'domestic_total_gross': 335061807, 'runtime_minutes': 143, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Aquaman', 'domestic_total_gross': 335061807, 'runtime_minutes': 143, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Bohemian Rhapsody', 'domestic_total_gross': 216428042, 'runtime_minutes': 134, 'rating': 'PG-13', 'budget': 52000000}
+{'movie_title': 'Bohemian Rhapsody', 'domestic_total_gross': 216428042, 'runtime_minutes': 134, 'rating': 'PG-13', 'budget': 52000000}
+{'movie_title': 'A Quiet Place', 'domestic_total_gross': 188024361, 'runtime_minutes': 90, 'rating': 'PG-13', 'budget': 17000000}
+{'movie_title': 'A Quiet Place', 'domestic_total_gross': 188024361, 'runtime_minutes': 90, 'rating': 'PG-13', 'budget': 17000000}
+{'movie_title': 'Ralph Breaks the Internet', 'domestic_total_gross': 201091711, 'runtime_minutes': 112, 'rating': 'PG', 'budget': 175000000}
+{'movie_title': 'Ralph Breaks the Internet', 'domestic_total_gross': 201091711, 'runtime_minutes': 112, 'rating': 'PG', 'budget': 175000000}
+{'movie_title': 'Crazy Rich Asians', 'domestic_total_gross': 174532921, 'runtime_minutes': None, 'rating': 'PG-13', 'budget': 30000000}
+{'movie_title': 'Crazy Rich Asians', 'domestic_total_gross': 174532921, 'runtime_minutes': None, 'rating': 'PG-13', 'budget': 30000000}
+{'movie_title': 'Hotel Transylvania 3: Summer Vacation', 'domestic_total_gross': 167510016, 'runtime_minutes': 97, 'rating': 'PG', 'budget': 80000000}
+{'movie_title': 'Hotel Transylvania 3: Summer Vacation', 'domestic_total_gross': 167510016, 'runtime_minutes': 97, 'rating': 'PG', 'budget': 80000000}
+{'movie_title': 'Halloween', 'domestic_total_gross': 159342015, 'runtime_minutes': 106, 'rating': 'R', 'budget': 10000000}
+{'movie_title': 'Halloween', 'domestic_total_gross': 159342015, 'runtime_minutes': 106, 'rating': 'R', 'budget': 10000000}
+{'movie_title': 'Fantastic Beasts: The Crimes of Grindelwald', 'domestic_total_gross': 159555901, 'runtime_minutes': 134, 'rating': 'PG-13', 'budget': 200000000}
+{'movie_title': 'Fantastic Beasts: The Crimes of Grindelwald', 'domestic_total_gross': 159555901, 'runtime_minutes': 134, 'rating': 'PG-13', 'budget': 200000000}
+{'movie_title': 'The Meg', 'domestic_total_gross': 145443742, 'runtime_minutes': 113, 'rating': 'PG-13', 'budget': 130000000}
+{'movie_title': 'The Meg', 'domestic_total_gross': 145443742, 'runtime_minutes': 113, 'rating': 'PG-13', 'budget': 130000000}
+{'movie_title': "Ocean's 8", 'domestic_total_gross': 140218711, 'runtime_minutes': 110, 'rating': 'PG-13', 'budget': 70000000}
+{'movie_title': "Ocean's 8", 'domestic_total_gross': 140218711, 'runtime_minutes': 110, 'rating': 'PG-13', 'budget': 70000000}
+{'movie_title': 'Ready Player One', 'domestic_total_gross': 137690172, 'runtime_minutes': 140, 'rating': 'PG-13', 'budget': 175000000}
+{'movie_title': 'Ready Player One', 'domestic_total_gross': 137690172, 'runtime_minutes': 140, 'rating': 'PG-13', 'budget': 175000000}
+{'movie_title': 'The Greatest Showman', 'domestic_total_gross': 174340174, 'runtime_minutes': 105, 'rating': 'PG', 'budget': 84000000}
+{'movie_title': 'The Greatest Showman', 'domestic_total_gross': 174340174, 'runtime_minutes': 105, 'rating': 'PG', 'budget': 84000000}
+{'movie_title': 'Mamma Mia! Here We Go Again', 'domestic_total_gross': 120634935, 'runtime_minutes': 114, 'rating': 'PG-13', 'budget': 75000000}
+{'movie_title': 'Mamma Mia! Here We Go Again', 'domestic_total_gross': 120634935, 'runtime_minutes': 114, 'rating': 'PG-13', 'budget': 75000000}
+{'movie_title': 'The Nun', 'domestic_total_gross': 117450119, 'runtime_minutes': 96, 'rating': 'R', 'budget': 22000000}
+{'movie_title': 'The Nun', 'domestic_total_gross': 117450119, 'runtime_minutes': 96, 'rating': 'R', 'budget': 22000000}
+{'movie_title': 'Peter Rabbit', 'domestic_total_gross': 115253424, 'runtime_minutes': 95, 'rating': 'PG', 'budget': 50000000}
+{'movie_title': 'Peter Rabbit', 'domestic_total_gross': 115253424, 'runtime_minutes': 95, 'rating': 'PG', 'budget': 50000000}
+{'movie_title': 'Creed II', 'domestic_total_gross': 115715889, 'runtime_minutes': 130, 'rating': 'PG-13', 'budget': 50000000}
+{'movie_title': 'Creed II', 'domestic_total_gross': 115715889, 'runtime_minutes': 130, 'rating': 'PG-13', 'budget': 50000000}
+{'movie_title': 'Spider', 'domestic_total_gross': 190241310, 'runtime_minutes': 117, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Spider', 'domestic_total_gross': 190241310, 'runtime_minutes': 117, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Mary Poppins Returns', 'domestic_total_gross': 171958438, 'runtime_minutes': 130, 'rating': 'PG', 'budget': 130000000}
+{'movie_title': 'Mary Poppins Returns', 'domestic_total_gross': 171958438, 'runtime_minutes': 130, 'rating': 'PG', 'budget': 130000000}
+{'movie_title': 'Star Wars: Episode VIII', 'domestic_total_gross': 620181382, 'runtime_minutes': 152, 'rating': 'PG-13', 'budget': 317000000}
+{'movie_title': 'Star Wars: Episode VIII', 'domestic_total_gross': 620181382, 'runtime_minutes': 152, 'rating': 'PG-13', 'budget': 317000000}
+{'movie_title': 'The Equalizer 2', 'domestic_total_gross': 102084362, 'runtime_minutes': 121, 'rating': 'R', 'budget': 62000000}
+{'movie_title': 'The Equalizer 2', 'domestic_total_gross': 102084362, 'runtime_minutes': 121, 'rating': 'R', 'budget': 62000000}
+{'movie_title': 'Rampage', 'domestic_total_gross': 101028233, 'runtime_minutes': 107, 'rating': 'PG-13', 'budget': 120000000}
+{'movie_title': 'Rampage', 'domestic_total_gross': 101028233, 'runtime_minutes': 107, 'rating': 'PG-13', 'budget': 120000000}
+{'movie_title': 'A Wrinkle in Time', 'domestic_total_gross': 100478608, 'runtime_minutes': 109, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'A Wrinkle in Time', 'domestic_total_gross': 100478608, 'runtime_minutes': 109, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Fifty Shades Freed', 'domestic_total_gross': 100407760, 'runtime_minutes': 105, 'rating': 'R', 'budget': 55000000}
+{'movie_title': 'Fifty Shades Freed', 'domestic_total_gross': 100407760, 'runtime_minutes': 105, 'rating': 'R', 'budget': 55000000}
+{'movie_title': 'Christopher Robin', 'domestic_total_gross': 99215042, 'runtime_minutes': 104, 'rating': 'PG', 'budget': 75000000}
+{'movie_title': 'Christopher Robin', 'domestic_total_gross': 99215042, 'runtime_minutes': 104, 'rating': 'PG', 'budget': 75000000}
+{'movie_title': 'I Can Only Imagine', 'domestic_total_gross': 83482352, 'runtime_minutes': 110, 'rating': 'PG', 'budget': 7000000}
+{'movie_title': 'I Can Only Imagine', 'domestic_total_gross': 83482352, 'runtime_minutes': 110, 'rating': 'PG', 'budget': 7000000}
+{'movie_title': 'Smallfoot', 'domestic_total_gross': 83240103, 'runtime_minutes': 96, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Smallfoot', 'domestic_total_gross': 83240103, 'runtime_minutes': 96, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'The Post', 'domestic_total_gross': 81903458, 'runtime_minutes': 116, 'rating': 'PG-13', 'budget': 50000000}
+{'movie_title': 'The Post', 'domestic_total_gross': 81903458, 'runtime_minutes': 116, 'rating': 'PG-13', 'budget': 50000000}
+{'movie_title': 'Night School', 'domestic_total_gross': 77339130, 'runtime_minutes': 111, 'rating': 'PG-13', 'budget': 29000000}
+{'movie_title': 'Night School', 'domestic_total_gross': 77339130, 'runtime_minutes': 111, 'rating': 'PG-13', 'budget': 29000000}
+{'movie_title': 'Bumblebee', 'domestic_total_gross': 127195589, 'runtime_minutes': 114, 'rating': 'PG-13', 'budget': 135000000}
+{'movie_title': 'Bumblebee', 'domestic_total_gross': 127195589, 'runtime_minutes': 114, 'rating': 'PG-13', 'budget': 135000000}
+{'movie_title': 'The First Purge', 'domestic_total_gross': 69488745, 'runtime_minutes': 97, 'rating': 'R', 'budget': 13000000}
+{'movie_title': 'The First Purge', 'domestic_total_gross': 69488745, 'runtime_minutes': 97, 'rating': 'R', 'budget': 13000000}
+{'movie_title': 'Game Night', 'domestic_total_gross': 69179066, 'runtime_minutes': 100, 'rating': 'R', 'budget': 37000000}
+{'movie_title': 'Game Night', 'domestic_total_gross': 69179066, 'runtime_minutes': 100, 'rating': 'R', 'budget': 37000000}
+{'movie_title': 'Book Club', 'domestic_total_gross': 68566296, 'runtime_minutes': 104, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Book Club', 'domestic_total_gross': 68566296, 'runtime_minutes': 104, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'The House with a Clock in Its Walls', 'domestic_total_gross': 68549695, 'runtime_minutes': 105, 'rating': 'PG', 'budget': 42000000}
+{'movie_title': 'The House with a Clock in Its Walls', 'domestic_total_gross': 68549695, 'runtime_minutes': 105, 'rating': 'PG', 'budget': 42000000}
+{'movie_title': 'Skyscraper', 'domestic_total_gross': 68420120, 'runtime_minutes': 102, 'rating': 'PG-13', 'budget': 125000000}
+{'movie_title': 'Skyscraper', 'domestic_total_gross': 68420120, 'runtime_minutes': 102, 'rating': 'PG-13', 'budget': 125000000}
+{'movie_title': 'Insidious: The Last Key', 'domestic_total_gross': 67745330, 'runtime_minutes': 103, 'rating': 'PG-13', 'budget': 10000000}
+{'movie_title': 'Insidious: The Last Key', 'domestic_total_gross': 67745330, 'runtime_minutes': 103, 'rating': 'PG-13', 'budget': 10000000}
+{'movie_title': 'Instant Family', 'domestic_total_gross': 67363237, 'runtime_minutes': 118, 'rating': 'PG-13', 'budget': 48000000}
+{'movie_title': 'Instant Family', 'domestic_total_gross': 67363237, 'runtime_minutes': 118, 'rating': 'PG-13', 'budget': 48000000}
+{'movie_title': 'The Mule', 'domestic_total_gross': 103804407, 'runtime_minutes': 116, 'rating': 'R', 'budget': 50000000}
+{'movie_title': 'The Mule', 'domestic_total_gross': 103804407, 'runtime_minutes': 116, 'rating': 'R', 'budget': 50000000}
+{'movie_title': 'Blockers', 'domestic_total_gross': 60311495, 'runtime_minutes': 102, 'rating': 'R', 'budget': 21000000}
+{'movie_title': 'Blockers', 'domestic_total_gross': 60311495, 'runtime_minutes': 102, 'rating': 'R', 'budget': 21000000}
+{'movie_title': 'Pacific Rim: Uprising', 'domestic_total_gross': 59874525, 'runtime_minutes': 111, 'rating': 'PG-13', 'budget': 150000000}
+{'movie_title': 'Pacific Rim: Uprising', 'domestic_total_gross': 59874525, 'runtime_minutes': 111, 'rating': 'PG-13', 'budget': 150000000}
+{'movie_title': 'Tomb Raider', 'domestic_total_gross': 58250803, 'runtime_minutes': 119, 'rating': 'PG-13', 'budget': 94000000}
+{'movie_title': 'Tomb Raider', 'domestic_total_gross': 58250803, 'runtime_minutes': 119, 'rating': 'PG-13', 'budget': 94000000}
+{'movie_title': 'Maze Runner: The Death Cure', 'domestic_total_gross': 58032443, 'runtime_minutes': 143, 'rating': 'PG-13', 'budget': 62000000}
+{'movie_title': 'Maze Runner: The Death Cure', 'domestic_total_gross': 58032443, 'runtime_minutes': 143, 'rating': 'PG-13', 'budget': 62000000}
+{'movie_title': 'Tag', 'domestic_total_gross': 54730625, 'runtime_minutes': 100, 'rating': 'R', 'budget': 28000000}
+{'movie_title': 'Tag', 'domestic_total_gross': 54730625, 'runtime_minutes': 100, 'rating': 'R', 'budget': 28000000}
+{'movie_title': 'The Nutcracker and the Four Realms', 'domestic_total_gross': 54858851, 'runtime_minutes': 99, 'rating': 'PG', 'budget': 120000000}
+{'movie_title': 'The Nutcracker and the Four Realms', 'domestic_total_gross': 54858851, 'runtime_minutes': 99, 'rating': 'PG', 'budget': 120000000}
+{'movie_title': 'A Simple Favor', 'domestic_total_gross': 53548586, 'runtime_minutes': 117, 'rating': 'R', 'budget': 20000000}
+{'movie_title': 'A Simple Favor', 'domestic_total_gross': 53548586, 'runtime_minutes': 117, 'rating': 'R', 'budget': 20000000}
+{'movie_title': 'Life of the Party', 'domestic_total_gross': 53059911, 'runtime_minutes': 105, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Life of the Party', 'domestic_total_gross': 53059911, 'runtime_minutes': 105, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'The Predator', 'domestic_total_gross': 51024708, 'runtime_minutes': 107, 'rating': 'R', 'budget': 88000000}
+{'movie_title': 'The Predator', 'domestic_total_gross': 51024708, 'runtime_minutes': 107, 'rating': 'R', 'budget': 88000000}
+{'movie_title': 'Overboard', 'domestic_total_gross': 50316123, 'runtime_minutes': 112, 'rating': 'PG-13', 'budget': 12000000}
+{'movie_title': 'Overboard', 'domestic_total_gross': 50316123, 'runtime_minutes': 112, 'rating': 'PG-13', 'budget': 12000000}
+{'movie_title': 'Sicario: Day of the Soldado', 'domestic_total_gross': 50072235, 'runtime_minutes': 122, 'rating': 'R', 'budget': 35000000}
+{'movie_title': 'Sicario: Day of the Soldado', 'domestic_total_gross': 50072235, 'runtime_minutes': 122, 'rating': 'R', 'budget': 35000000}
+{'movie_title': 'I Feel Pretty', 'domestic_total_gross': 48795601, 'runtime_minutes': 110, 'rating': 'PG-13', 'budget': 32000000}
+{'movie_title': 'I Feel Pretty', 'domestic_total_gross': 48795601, 'runtime_minutes': 110, 'rating': 'PG-13', 'budget': 32000000}
+{'movie_title': 'BlacKkKlansman', 'domestic_total_gross': 49275340, 'runtime_minutes': 135, 'rating': 'R', 'budget': 15000000}
+{'movie_title': 'BlacKkKlansman', 'domestic_total_gross': 49275340, 'runtime_minutes': 135, 'rating': 'R', 'budget': 15000000}
+{'movie_title': 'The Shape of Water', 'domestic_total_gross': 63859435, 'runtime_minutes': 123, 'rating': 'R', 'budget': 0}
+{'movie_title': 'The Shape of Water', 'domestic_total_gross': 63859435, 'runtime_minutes': 123, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Red Sparrow', 'domestic_total_gross': 46874505, 'runtime_minutes': 140, 'rating': 'R', 'budget': 69000000}
+{'movie_title': 'Red Sparrow', 'domestic_total_gross': 46874505, 'runtime_minutes': 140, 'rating': 'R', 'budget': 69000000}
+{'movie_title': 'Breaking In', 'domestic_total_gross': 46840590, 'runtime_minutes': 88, 'rating': 'PG-13', 'budget': 6000000}
+{'movie_title': 'Breaking In', 'domestic_total_gross': 46840590, 'runtime_minutes': 88, 'rating': 'PG-13', 'budget': 6000000}
+{'movie_title': 'Goosebumps 2: Haunted Halloween', 'domestic_total_gross': 46700633, 'runtime_minutes': 90, 'rating': 'PG', 'budget': 35000000}
+{'movie_title': 'Goosebumps 2: Haunted Halloween', 'domestic_total_gross': 46700633, 'runtime_minutes': 90, 'rating': 'PG', 'budget': 35000000}
+{'movie_title': '12 Strong', 'domestic_total_gross': 45819713, 'runtime_minutes': 130, 'rating': 'R', 'budget': 0}
+{'movie_title': '12 Strong', 'domestic_total_gross': 45819713, 'runtime_minutes': 130, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Den of Thieves', 'domestic_total_gross': 44947622, 'runtime_minutes': 140, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Den of Thieves', 'domestic_total_gross': 44947622, 'runtime_minutes': 140, 'rating': 'R', 'budget': 0}
+{'movie_title': 'First Man', 'domestic_total_gross': 44936545, 'runtime_minutes': 141, 'rating': 'PG-13', 'budget': 59000000}
+{'movie_title': 'First Man', 'domestic_total_gross': 44936545, 'runtime_minutes': 141, 'rating': 'PG-13', 'budget': 59000000}
+{'movie_title': 'Hereditary', 'domestic_total_gross': 44069456, 'runtime_minutes': 127, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Hereditary', 'domestic_total_gross': 44069456, 'runtime_minutes': 127, 'rating': 'R', 'budget': 0}
+{'movie_title': "Tyler Perry's Acrimony", 'domestic_total_gross': 43549096, 'runtime_minutes': None, 'rating': 'R', 'budget': 0}
+{'movie_title': "Tyler Perry's Acrimony", 'domestic_total_gross': 43549096, 'runtime_minutes': None, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Sherlock Gnomes', 'domestic_total_gross': 43242871, 'runtime_minutes': 86, 'rating': 'PG', 'budget': 59000000}
+{'movie_title': 'Sherlock Gnomes', 'domestic_total_gross': 43242871, 'runtime_minutes': 86, 'rating': 'PG', 'budget': 59000000}
+{'movie_title': 'Uncle Drew', 'domestic_total_gross': 42469946, 'runtime_minutes': 103, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Uncle Drew', 'domestic_total_gross': 42469946, 'runtime_minutes': 103, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Widows', 'domestic_total_gross': 42402632, 'runtime_minutes': 129, 'rating': 'R', 'budget': 42000000}
+{'movie_title': 'Widows', 'domestic_total_gross': 42402632, 'runtime_minutes': 129, 'rating': 'R', 'budget': 42000000}
+{'movie_title': 'Pitch Perfect 3', 'domestic_total_gross': 104897530, 'runtime_minutes': 93, 'rating': 'PG-13', 'budget': 45000000}
+{'movie_title': 'Pitch Perfect 3', 'domestic_total_gross': 104897530, 'runtime_minutes': 93, 'rating': 'PG-13', 'budget': 45000000}
+{'movie_title': 'Truth or Dare', 'domestic_total_gross': 41411015, 'runtime_minutes': 100, 'rating': 'PG-13', 'budget': 3500000}
+{'movie_title': 'Truth or Dare', 'domestic_total_gross': 41411015, 'runtime_minutes': 100, 'rating': 'PG-13', 'budget': 3500000}
+{'movie_title': 'Paddington 2', 'domestic_total_gross': 40891591, 'runtime_minutes': 103, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Paddington 2', 'domestic_total_gross': 40891591, 'runtime_minutes': 103, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Love, Simon', 'domestic_total_gross': 40826341, 'runtime_minutes': 110, 'rating': 'PG-13', 'budget': 17000000}
+{'movie_title': 'Love, Simon', 'domestic_total_gross': 40826341, 'runtime_minutes': 110, 'rating': 'PG-13', 'budget': 17000000}
+{'movie_title': 'Darkest Hour', 'domestic_total_gross': 56468410, 'runtime_minutes': 125, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Darkest Hour', 'domestic_total_gross': 56468410, 'runtime_minutes': 125, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'The Commuter', 'domestic_total_gross': 36343858, 'runtime_minutes': 104, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'The Commuter', 'domestic_total_gross': 36343858, 'runtime_minutes': 104, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'The 15:17 to Paris', 'domestic_total_gross': 36276286, 'runtime_minutes': 94, 'rating': 'PG-13', 'budget': 30000000}
+{'movie_title': 'The 15:17 to Paris', 'domestic_total_gross': 36276286, 'runtime_minutes': 94, 'rating': 'PG-13', 'budget': 30000000}
+{'movie_title': 'Mile 22', 'domestic_total_gross': 36108758, 'runtime_minutes': 94, 'rating': 'R', 'budget': 50000000}
+{'movie_title': 'Mile 22', 'domestic_total_gross': 36108758, 'runtime_minutes': 94, 'rating': 'R', 'budget': 50000000}
+{'movie_title': 'Alpha', 'domestic_total_gross': 35857181, 'runtime_minutes': 96, 'rating': 'PG-13', 'budget': 51000000}
+{'movie_title': 'Alpha', 'domestic_total_gross': 35857181, 'runtime_minutes': 96, 'rating': 'PG-13', 'budget': 51000000}
+{'movie_title': 'Peppermint', 'domestic_total_gross': 35418723, 'runtime_minutes': 101, 'rating': 'R', 'budget': 25000000}
+{'movie_title': 'Peppermint', 'domestic_total_gross': 35418723, 'runtime_minutes': 101, 'rating': 'R', 'budget': 25000000}
+{'movie_title': 'Death Wish', 'domestic_total_gross': 34017028, 'runtime_minutes': 107, 'rating': 'R', 'budget': 30000000}
+{'movie_title': 'Death Wish', 'domestic_total_gross': 34017028, 'runtime_minutes': 107, 'rating': 'R', 'budget': 30000000}
+{'movie_title': 'The Spy Who Dumped Me', 'domestic_total_gross': 33562069, 'runtime_minutes': 117, 'rating': 'R', 'budget': 40000000}
+{'movie_title': 'The Spy Who Dumped Me', 'domestic_total_gross': 33562069, 'runtime_minutes': 117, 'rating': 'R', 'budget': 40000000}
+{'movie_title': 'Annihilation', 'domestic_total_gross': 32732301, 'runtime_minutes': 115, 'rating': 'R', 'budget': 40000000}
+{'movie_title': 'Annihilation', 'domestic_total_gross': 32732301, 'runtime_minutes': 115, 'rating': 'R', 'budget': 40000000}
+{'movie_title': 'Green Book', 'domestic_total_gross': 85080171, 'runtime_minutes': 130, 'rating': 'PG-13', 'budget': 23000000}
+{'movie_title': 'Green Book', 'domestic_total_gross': 85080171, 'runtime_minutes': 130, 'rating': 'PG-13', 'budget': 23000000}
+{'movie_title': 'Isle of Dogs', 'domestic_total_gross': 32015231, 'runtime_minutes': 101, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Isle of Dogs', 'domestic_total_gross': 32015231, 'runtime_minutes': 101, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': "Nobody's Fool", 'domestic_total_gross': 31713110, 'runtime_minutes': 110, 'rating': 'R', 'budget': 19000000}
+{'movie_title': "Nobody's Fool", 'domestic_total_gross': 31713110, 'runtime_minutes': 110, 'rating': 'R', 'budget': 19000000}
+{'movie_title': 'Adrift', 'domestic_total_gross': 31445012, 'runtime_minutes': 96, 'rating': 'PG-13', 'budget': 35000000}
+{'movie_title': 'Adrift', 'domestic_total_gross': 31445012, 'runtime_minutes': 96, 'rating': 'PG-13', 'budget': 35000000}
+{'movie_title': 'Ferdinand', 'domestic_total_gross': 84410380, 'runtime_minutes': 108, 'rating': 'PG', 'budget': 111000000}
+{'movie_title': 'Ferdinand', 'domestic_total_gross': 84410380, 'runtime_minutes': 108, 'rating': 'PG', 'budget': 111000000}
+{'movie_title': 'Robin Hood', 'domestic_total_gross': 30824628, 'runtime_minutes': 116, 'rating': 'PG-13', 'budget': 100000000}
+{'movie_title': 'Robin Hood', 'domestic_total_gross': 30824628, 'runtime_minutes': 116, 'rating': 'PG-13', 'budget': 100000000}
+{'movie_title': 'Super Troopers 2', 'domestic_total_gross': 30617396, 'runtime_minutes': 99, 'rating': 'R', 'budget': 13500000}
+{'movie_title': 'Super Troopers 2', 'domestic_total_gross': 30617396, 'runtime_minutes': 99, 'rating': 'R', 'budget': 13500000}
+{'movie_title': 'Slender Man', 'domestic_total_gross': 30569484, 'runtime_minutes': 93, 'rating': 'PG-13', 'budget': 10000000}
+{'movie_title': 'Slender Man', 'domestic_total_gross': 30569484, 'runtime_minutes': 93, 'rating': 'PG-13', 'budget': 10000000}
+{'movie_title': 'Three Billboards Outside Ebbing, Missouri', 'domestic_total_gross': 54513740, 'runtime_minutes': 115, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Three Billboards Outside Ebbing, Missouri', 'domestic_total_gross': 54513740, 'runtime_minutes': 115, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Coco', 'domestic_total_gross': 209726015, 'runtime_minutes': 105, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Coco', 'domestic_total_gross': 209726015, 'runtime_minutes': 105, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Teen Titans GO! to the Movies', 'domestic_total_gross': 29790236, 'runtime_minutes': 84, 'rating': 'PG', 'budget': 10000000}
+{'movie_title': 'Teen Titans GO! to the Movies', 'domestic_total_gross': 29790236, 'runtime_minutes': 84, 'rating': 'PG', 'budget': 10000000}
+{'movie_title': 'Hostiles', 'domestic_total_gross': 29819114, 'runtime_minutes': 134, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Hostiles', 'domestic_total_gross': 29819114, 'runtime_minutes': 134, 'rating': 'R', 'budget': 0}
+{'movie_title': 'The Hate U Give', 'domestic_total_gross': 29719483, 'runtime_minutes': 133, 'rating': 'PG-13', 'budget': 23000000}
+{'movie_title': 'The Hate U Give', 'domestic_total_gross': 29719483, 'runtime_minutes': 133, 'rating': 'PG-13', 'budget': 23000000}
+{'movie_title': 'I, Tonya', 'domestic_total_gross': 30014539, 'runtime_minutes': 119, 'rating': 'R', 'budget': 0}
+{'movie_title': 'I, Tonya', 'domestic_total_gross': 30014539, 'runtime_minutes': 119, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Searching', 'domestic_total_gross': 26020957, 'runtime_minutes': 102, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Searching', 'domestic_total_gross': 26020957, 'runtime_minutes': 102, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Winchester', 'domestic_total_gross': 25091816, 'runtime_minutes': 99, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Winchester', 'domestic_total_gross': 25091816, 'runtime_minutes': 99, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'The Strangers: Prey at Night', 'domestic_total_gross': 24586708, 'runtime_minutes': 85, 'rating': 'R', 'budget': 0}
+{'movie_title': 'The Strangers: Prey at Night', 'domestic_total_gross': 24586708, 'runtime_minutes': 85, 'rating': 'R', 'budget': 0}
+{'movie_title': 'White Boy Rick', 'domestic_total_gross': 24011188, 'runtime_minutes': 111, 'rating': 'R', 'budget': 29000000}
+{'movie_title': 'White Boy Rick', 'domestic_total_gross': 24011188, 'runtime_minutes': 111, 'rating': 'R', 'budget': 29000000}
+{'movie_title': 'Second Act', 'domestic_total_gross': 39282227, 'runtime_minutes': 103, 'rating': 'PG-13', 'budget': 16000000}
+{'movie_title': 'Second Act', 'domestic_total_gross': 39282227, 'runtime_minutes': 103, 'rating': 'PG-13', 'budget': 16000000}
+{'movie_title': "Molly's Game", 'domestic_total_gross': 28780744, 'runtime_minutes': 140, 'rating': 'R', 'budget': 0}
+{'movie_title': "Molly's Game", 'domestic_total_gross': 28780744, 'runtime_minutes': 140, 'rating': 'R', 'budget': 0}
+{'movie_title': "Won't You Be My Neighbor?", 'domestic_total_gross': 22835787, 'runtime_minutes': 95, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': "Won't You Be My Neighbor?", 'domestic_total_gross': 22835787, 'runtime_minutes': 95, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Overlord', 'domestic_total_gross': 21704844, 'runtime_minutes': 110, 'rating': 'R', 'budget': 38000000}
+{'movie_title': 'Overlord', 'domestic_total_gross': 21704844, 'runtime_minutes': 110, 'rating': 'R', 'budget': 38000000}
+{'movie_title': 'Holmes & Watson', 'domestic_total_gross': 30573626, 'runtime_minutes': 90, 'rating': 'PG-13', 'budget': 42000000}
+{'movie_title': 'Holmes & Watson', 'domestic_total_gross': 30573626, 'runtime_minutes': 90, 'rating': 'PG-13', 'budget': 42000000}
+{'movie_title': 'Proud Mary', 'domestic_total_gross': 20877013, 'runtime_minutes': 89, 'rating': 'R', 'budget': 14000000}
+{'movie_title': 'Proud Mary', 'domestic_total_gross': 20877013, 'runtime_minutes': 89, 'rating': 'R', 'budget': 14000000}
+{'movie_title': 'The Happytime Murders', 'domestic_total_gross': 20706452, 'runtime_minutes': 91, 'rating': 'R', 'budget': 40000000}
+{'movie_title': 'The Happytime Murders', 'domestic_total_gross': 20706452, 'runtime_minutes': 91, 'rating': 'R', 'budget': 40000000}
+{'movie_title': 'Phantom Thread', 'domestic_total_gross': 21198205, 'runtime_minutes': 130, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Phantom Thread', 'domestic_total_gross': 21198205, 'runtime_minutes': 130, 'rating': 'R', 'budget': 0}
+{'movie_title': 'SuperFly', 'domestic_total_gross': 20545116, 'runtime_minutes': 116, 'rating': 'R', 'budget': 16000000}
+{'movie_title': 'SuperFly', 'domestic_total_gross': 20545116, 'runtime_minutes': 116, 'rating': 'R', 'budget': 16000000}
+{'movie_title': 'Vice', 'domestic_total_gross': 47836282, 'runtime_minutes': 132, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Vice', 'domestic_total_gross': 47836282, 'runtime_minutes': 132, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Show Dogs', 'domestic_total_gross': 17857020, 'runtime_minutes': 92, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Show Dogs', 'domestic_total_gross': 17857020, 'runtime_minutes': 92, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Bad Times at the El Royale', 'domestic_total_gross': 17839115, 'runtime_minutes': 141, 'rating': 'R', 'budget': 32000000}
+{'movie_title': 'Bad Times at the El Royale', 'domestic_total_gross': 17839115, 'runtime_minutes': 141, 'rating': 'R', 'budget': 32000000}
+{'movie_title': 'Operation Finale', 'domestic_total_gross': 17612099, 'runtime_minutes': 122, 'rating': 'PG-13', 'budget': 24000000}
+{'movie_title': 'Operation Finale', 'domestic_total_gross': 17612099, 'runtime_minutes': 122, 'rating': 'PG-13', 'budget': 24000000}
+{'movie_title': 'Paul, Apostle of Christ', 'domestic_total_gross': 17560475, 'runtime_minutes': 108, 'rating': 'PG-13', 'budget': 5000000}
+{'movie_title': 'Paul, Apostle of Christ', 'domestic_total_gross': 17560475, 'runtime_minutes': 108, 'rating': 'PG-13', 'budget': 5000000}
+{'movie_title': 'Lady Bird', 'domestic_total_gross': 48958273, 'runtime_minutes': 94, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Lady Bird', 'domestic_total_gross': 48958273, 'runtime_minutes': 94, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Sorry to Bother You', 'domestic_total_gross': 17493096, 'runtime_minutes': 112, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Sorry to Bother You', 'domestic_total_gross': 17493096, 'runtime_minutes': 112, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Chappaquiddick', 'domestic_total_gross': 17395520, 'runtime_minutes': 106, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Chappaquiddick', 'domestic_total_gross': 17395520, 'runtime_minutes': 106, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Forever My Girl', 'domestic_total_gross': 16376066, 'runtime_minutes': 108, 'rating': 'PG', 'budget': 3500000}
+{'movie_title': 'Forever My Girl', 'domestic_total_gross': 16376066, 'runtime_minutes': 108, 'rating': 'PG', 'budget': 3500000}
+{'movie_title': 'The Favourite', 'domestic_total_gross': 34366783, 'runtime_minutes': 119, 'rating': 'R', 'budget': 0}
+{'movie_title': 'The Favourite', 'domestic_total_gross': 34366783, 'runtime_minutes': 119, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Hunter Killer', 'domestic_total_gross': 15767460, 'runtime_minutes': 121, 'rating': 'R', 'budget': 40000000}
+{'movie_title': 'Hunter Killer', 'domestic_total_gross': 15767460, 'runtime_minutes': 121, 'rating': 'R', 'budget': 40000000}
+{'movie_title': 'Mortal Engines', 'domestic_total_gross': 15951040, 'runtime_minutes': 128, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Mortal Engines', 'domestic_total_gross': 15951040, 'runtime_minutes': 128, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': "The Girl in the Spider's Web", 'domestic_total_gross': 14841338, 'runtime_minutes': 115, 'rating': 'R', 'budget': 43000000}
+{'movie_title': "The Girl in the Spider's Web", 'domestic_total_gross': 14841338, 'runtime_minutes': 115, 'rating': 'R', 'budget': 43000000}
+{'movie_title': 'The Possession of Hannah Grace', 'domestic_total_gross': 14837422, 'runtime_minutes': 86, 'rating': 'R', 'budget': 7700000}
+{'movie_title': 'The Possession of Hannah Grace', 'domestic_total_gross': 14837422, 'runtime_minutes': 86, 'rating': 'R', 'budget': 7700000}
+{'movie_title': 'RBG', 'domestic_total_gross': 14017361, 'runtime_minutes': 98, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'RBG', 'domestic_total_gross': 14017361, 'runtime_minutes': 98, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Eighth Grade', 'domestic_total_gross': 13539709, 'runtime_minutes': 93, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Eighth Grade', 'domestic_total_gross': 13539709, 'runtime_minutes': 93, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Call Me by Your Name', 'domestic_total_gross': 18095701, 'runtime_minutes': 132, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Call Me by Your Name', 'domestic_total_gross': 18095701, 'runtime_minutes': 132, 'rating': 'R', 'budget': 0}
+{'movie_title': 'The Darkest Minds', 'domestic_total_gross': 12695691, 'runtime_minutes': 104, 'rating': 'PG-13', 'budget': 34000000}
+{'movie_title': 'The Darkest Minds', 'domestic_total_gross': 12695691, 'runtime_minutes': 104, 'rating': 'PG-13', 'budget': 34000000}
+{'movie_title': 'All the Money in the World', 'domestic_total_gross': 25113707, 'runtime_minutes': 132, 'rating': 'R', 'budget': 0}
+{'movie_title': 'All the Money in the World', 'domestic_total_gross': 25113707, 'runtime_minutes': 132, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Three Identical Strangers', 'domestic_total_gross': 12320845, 'runtime_minutes': 96, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Three Identical Strangers', 'domestic_total_gross': 12320845, 'runtime_minutes': 96, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Upgrade', 'domestic_total_gross': 11977130, 'runtime_minutes': 100, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Upgrade', 'domestic_total_gross': 11977130, 'runtime_minutes': 100, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Padmaavat', 'domestic_total_gross': 11846060, 'runtime_minutes': 164, 'rating': None, 'budget': 0}
+{'movie_title': 'Padmaavat', 'domestic_total_gross': 11846060, 'runtime_minutes': 164, 'rating': None, 'budget': 0}
+{'movie_title': 'Free Solo', 'domestic_total_gross': 17541090, 'runtime_minutes': 100, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Free Solo', 'domestic_total_gross': 17541090, 'runtime_minutes': 100, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'The Old Man & the Gun', 'domestic_total_gross': 11277120, 'runtime_minutes': 93, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'The Old Man & the Gun', 'domestic_total_gross': 11277120, 'runtime_minutes': 93, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Hell Fest', 'domestic_total_gross': 11107431, 'runtime_minutes': 89, 'rating': 'R', 'budget': 5500000}
+{'movie_title': 'Hell Fest', 'domestic_total_gross': 11107431, 'runtime_minutes': 89, 'rating': 'R', 'budget': 5500000}
+{'movie_title': 'Wonder', 'domestic_total_gross': 132422809, 'runtime_minutes': 113, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Wonder', 'domestic_total_gross': 132422809, 'runtime_minutes': 113, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'The Miracle Season', 'domestic_total_gross': 10230620, 'runtime_minutes': 101, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'The Miracle Season', 'domestic_total_gross': 10230620, 'runtime_minutes': 101, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Mary Queen of Scots', 'domestic_total_gross': 16468499, 'runtime_minutes': 124, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Mary Queen of Scots', 'domestic_total_gross': 16468499, 'runtime_minutes': 124, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Midnight Sun', 'domestic_total_gross': 9561064, 'runtime_minutes': 91, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Midnight Sun', 'domestic_total_gross': 9561064, 'runtime_minutes': 91, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Tully', 'domestic_total_gross': 9369755, 'runtime_minutes': 95, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Tully', 'domestic_total_gross': 9369755, 'runtime_minutes': 95, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Traffik', 'domestic_total_gross': 9186156, 'runtime_minutes': 96, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Traffik', 'domestic_total_gross': 9186156, 'runtime_minutes': 96, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Unfriended: Dark Web', 'domestic_total_gross': 8866745, 'runtime_minutes': 92, 'rating': 'R', 'budget': 1000000}
+{'movie_title': 'Unfriended: Dark Web', 'domestic_total_gross': 8866745, 'runtime_minutes': 92, 'rating': 'R', 'budget': 1000000}
+{'movie_title': 'Welcome to Marwen', 'domestic_total_gross': 10763520, 'runtime_minutes': 116, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Welcome to Marwen', 'domestic_total_gross': 10763520, 'runtime_minutes': 116, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Early Man', 'domestic_total_gross': 8267544, 'runtime_minutes': 89, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Early Man', 'domestic_total_gross': 8267544, 'runtime_minutes': 89, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'The Wife', 'domestic_total_gross': 9601092, 'runtime_minutes': 99, 'rating': 'R', 'budget': 0}
+{'movie_title': 'The Wife', 'domestic_total_gross': 9601092, 'runtime_minutes': 99, 'rating': 'R', 'budget': 0}
+{'movie_title': 'The Death of Stalin', 'domestic_total_gross': 8047856, 'runtime_minutes': 107, 'rating': 'R', 'budget': 0}
+{'movie_title': 'The Death of Stalin', 'domestic_total_gross': 8047856, 'runtime_minutes': 107, 'rating': 'R', 'budget': 0}
+{'movie_title': 'They Shall Not Grow Old 2018 Re', 'domestic_total_gross': 17956913, 'runtime_minutes': 99, 'rating': 'R', 'budget': 0}
+{'movie_title': 'They Shall Not Grow Old 2018 Re', 'domestic_total_gross': 17956913, 'runtime_minutes': 99, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Sanju', 'domestic_total_gross': 7909317, 'runtime_minutes': 155, 'rating': None, 'budget': 0}
+{'movie_title': 'Sanju', 'domestic_total_gross': 7909317, 'runtime_minutes': 155, 'rating': None, 'budget': 0}
+{'movie_title': 'Unsane', 'domestic_total_gross': 7732899, 'runtime_minutes': 98, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Unsane', 'domestic_total_gross': 7732899, 'runtime_minutes': 98, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Beautiful Boy', 'domestic_total_gross': 7649973, 'runtime_minutes': None, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Beautiful Boy', 'domestic_total_gross': 7649973, 'runtime_minutes': None, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Can You Ever Forgive Me?', 'domestic_total_gross': 8803865, 'runtime_minutes': 106, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Can You Ever Forgive Me?', 'domestic_total_gross': 8803865, 'runtime_minutes': 106, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Mid90s', 'domestic_total_gross': 7362439, 'runtime_minutes': 85, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Mid90s', 'domestic_total_gross': 7362439, 'runtime_minutes': 85, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Downsizing', 'domestic_total_gross': 24449754, 'runtime_minutes': 135, 'rating': 'R', 'budget': 68000000}
+{'movie_title': 'Downsizing', 'domestic_total_gross': 24449754, 'runtime_minutes': 135, 'rating': 'R', 'budget': 68000000}
+{'movie_title': 'Dog Days', 'domestic_total_gross': 6809080, 'runtime_minutes': 113, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Dog Days', 'domestic_total_gross': 6809080, 'runtime_minutes': 113, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Boy Erased', 'domestic_total_gross': 6788692, 'runtime_minutes': 115, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Boy Erased', 'domestic_total_gross': 6788692, 'runtime_minutes': 115, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Hotel Artemis', 'domestic_total_gross': 6708147, 'runtime_minutes': 94, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Hotel Artemis', 'domestic_total_gross': 6708147, 'runtime_minutes': 94, 'rating': 'R', 'budget': 0}
+{'movie_title': 'A', 'domestic_total_gross': 6501381, 'runtime_minutes': 98, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'A', 'domestic_total_gross': 6501381, 'runtime_minutes': 98, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Fahrenheit 11/9', 'domestic_total_gross': 6352306, 'runtime_minutes': 128, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Fahrenheit 11/9', 'domestic_total_gross': 6352306, 'runtime_minutes': 128, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Unbroken: Path to Redemption', 'domestic_total_gross': 6216897, 'runtime_minutes': 98, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Unbroken: Path to Redemption', 'domestic_total_gross': 6216897, 'runtime_minutes': 98, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'The Hurricane Heist', 'domestic_total_gross': 6115825, 'runtime_minutes': 103, 'rating': 'PG-13', 'budget': 35000000}
+{'movie_title': 'The Hurricane Heist', 'domestic_total_gross': 6115825, 'runtime_minutes': 103, 'rating': 'PG-13', 'budget': 35000000}
+{'movie_title': 'Every Day', 'domestic_total_gross': 6102076, 'runtime_minutes': 97, 'rating': 'PG-13', 'budget': 4900000}
+{'movie_title': 'Every Day', 'domestic_total_gross': 6102076, 'runtime_minutes': 97, 'rating': 'PG-13', 'budget': 4900000}
+{'movie_title': 'Leave No Trace', 'domestic_total_gross': 6046104, 'runtime_minutes': 109, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Leave No Trace', 'domestic_total_gross': 6046104, 'runtime_minutes': 109, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Once Upon a Deadpool 2018 Re', 'domestic_total_gross': 6100309, 'runtime_minutes': 119, 'rating': 'R', 'budget': 110000000}
+{'movie_title': 'Once Upon a Deadpool 2018 Re', 'domestic_total_gross': 6100309, 'runtime_minutes': 119, 'rating': 'R', 'budget': 110000000}
+{'movie_title': 'Death of a Nation', 'domestic_total_gross': 5885881, 'runtime_minutes': 108, 'rating': 'PG-13', 'budget': 6000000}
+{'movie_title': 'Death of a Nation', 'domestic_total_gross': 5885881, 'runtime_minutes': 108, 'rating': 'PG-13', 'budget': 6000000}
+{'movie_title': 'Pandas', 'domestic_total_gross': 7574012, 'runtime_minutes': None, 'rating': 'G', 'budget': 0}
+{'movie_title': 'Pandas', 'domestic_total_gross': 7574012, 'runtime_minutes': None, 'rating': 'G', 'budget': 0}
+{'movie_title': 'My Hero Academia: Two Heroes', 'domestic_total_gross': 5754556, 'runtime_minutes': 96, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'My Hero Academia: Two Heroes', 'domestic_total_gross': 5754556, 'runtime_minutes': 96, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': "God's Not Dead: A Light in Darkness", 'domestic_total_gross': 5728940, 'runtime_minutes': 105, 'rating': 'PG', 'budget': 0}
+{'movie_title': "God's Not Dead: A Light in Darkness", 'domestic_total_gross': 5728940, 'runtime_minutes': 105, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Kin', 'domestic_total_gross': 5718096, 'runtime_minutes': 102, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Kin', 'domestic_total_gross': 5718096, 'runtime_minutes': 102, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Colette', 'domestic_total_gross': 5137622, 'runtime_minutes': 111, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Colette', 'domestic_total_gross': 5137622, 'runtime_minutes': 111, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Action Point', 'domestic_total_gross': 5059608, 'runtime_minutes': 85, 'rating': 'R', 'budget': 19000000}
+{'movie_title': 'Action Point', 'domestic_total_gross': 5059608, 'runtime_minutes': 85, 'rating': 'R', 'budget': 19000000}
+{'movie_title': 'Beirut', 'domestic_total_gross': 5019226, 'runtime_minutes': 109, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Beirut', 'domestic_total_gross': 5019226, 'runtime_minutes': 109, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Gringo', 'domestic_total_gross': 4969853, 'runtime_minutes': 111, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Gringo', 'domestic_total_gross': 4969853, 'runtime_minutes': 111, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Samson', 'domestic_total_gross': 4719928, 'runtime_minutes': 110, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Samson', 'domestic_total_gross': 4719928, 'runtime_minutes': 110, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Father Figures', 'domestic_total_gross': 17501244, 'runtime_minutes': 113, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Father Figures', 'domestic_total_gross': 17501244, 'runtime_minutes': 113, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Johnny English Strikes Again', 'domestic_total_gross': 4412170, 'runtime_minutes': 89, 'rating': 'PG', 'budget': 25000000}
+{'movie_title': 'Johnny English Strikes Again', 'domestic_total_gross': 4412170, 'runtime_minutes': 89, 'rating': 'PG', 'budget': 25000000}
+{'movie_title': 'Gotti', 'domestic_total_gross': 4343227, 'runtime_minutes': 112, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Gotti', 'domestic_total_gross': 4343227, 'runtime_minutes': 112, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Blindspotting', 'domestic_total_gross': 4333394, 'runtime_minutes': 95, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Blindspotting', 'domestic_total_gross': 4333394, 'runtime_minutes': 95, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Burn the Stage: The Movie', 'domestic_total_gross': 4201819, 'runtime_minutes': 84, 'rating': None, 'budget': 0}
+{'movie_title': 'Burn the Stage: The Movie', 'domestic_total_gross': 4201819, 'runtime_minutes': 84, 'rating': None, 'budget': 0}
+{'movie_title': 'Ya veremos', 'domestic_total_gross': 4165949, 'runtime_minutes': 85, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Ya veremos', 'domestic_total_gross': 4165949, 'runtime_minutes': 85, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Life Itself', 'domestic_total_gross': 4102648, 'runtime_minutes': 117, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Life Itself', 'domestic_total_gross': 4102648, 'runtime_minutes': 117, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Sgt. Stubby: An American Hero', 'domestic_total_gross': 4015935, 'runtime_minutes': 84, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Sgt. Stubby: An American Hero', 'domestic_total_gross': 4015935, 'runtime_minutes': 84, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Thor: Ragnarok', 'domestic_total_gross': 315058289, 'runtime_minutes': 130, 'rating': 'PG-13', 'budget': 180000000}
+{'movie_title': 'Thor: Ragnarok', 'domestic_total_gross': 315058289, 'runtime_minutes': 130, 'rating': 'PG-13', 'budget': 180000000}
+{'movie_title': "Gosnell: The Trial of America's Biggest Serial Killer", 'domestic_total_gross': 3679893, 'runtime_minutes': 93, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': "Gosnell: The Trial of America's Biggest Serial Killer", 'domestic_total_gross': 3679893, 'runtime_minutes': 93, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Indivisible', 'domestic_total_gross': 3511417, 'runtime_minutes': 119, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Indivisible', 'domestic_total_gross': 3511417, 'runtime_minutes': 119, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'The Oscar Nominated Short Films 2018: Live Action', 'domestic_total_gross': 3508777, 'runtime_minutes': 96, 'rating': None, 'budget': 0}
+{'movie_title': 'The Oscar Nominated Short Films 2018: Live Action', 'domestic_total_gross': 3508777, 'runtime_minutes': 96, 'rating': None, 'budget': 0}
+{'movie_title': 'Disobedience', 'domestic_total_gross': 3498782, 'runtime_minutes': 114, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Disobedience', 'domestic_total_gross': 3498782, 'runtime_minutes': 114, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Justice League', 'domestic_total_gross': 229024295, 'runtime_minutes': None, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Justice League', 'domestic_total_gross': 229024295, 'runtime_minutes': None, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'First Reformed', 'domestic_total_gross': 3448256, 'runtime_minutes': 113, 'rating': 'R', 'budget': 0}
+{'movie_title': 'First Reformed', 'domestic_total_gross': 3448256, 'runtime_minutes': 113, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Juliet, Naked', 'domestic_total_gross': 3444895, 'runtime_minutes': 97, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Juliet, Naked', 'domestic_total_gross': 3444895, 'runtime_minutes': 97, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Bad Samaritan', 'domestic_total_gross': 3435047, 'runtime_minutes': 110, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Bad Samaritan', 'domestic_total_gross': 3435047, 'runtime_minutes': 110, 'rating': 'R', 'budget': 0}
+{'movie_title': '7 Days in Entebbe', 'domestic_total_gross': 3326885, 'runtime_minutes': 107, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': '7 Days in Entebbe', 'domestic_total_gross': 3326885, 'runtime_minutes': 107, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'The Disaster Artist', 'domestic_total_gross': 21120616, 'runtime_minutes': 104, 'rating': 'R', 'budget': 0}
+{'movie_title': 'The Disaster Artist', 'domestic_total_gross': 21120616, 'runtime_minutes': 104, 'rating': 'R', 'budget': 0}
+{'movie_title': '2001: A Space Odyssey 2017 Re', 'domestic_total_gross': 3236321, 'runtime_minutes': 149, 'rating': None, 'budget': 12000000}
+{'movie_title': '2001: A Space Odyssey 2017 Re', 'domestic_total_gross': 3236321, 'runtime_minutes': 149, 'rating': None, 'budget': 12000000}
+{'movie_title': '2.0', 'domestic_total_gross': 4152000, 'runtime_minutes': 148, 'rating': None, 'budget': 0}
+{'movie_title': '2.0', 'domestic_total_gross': 4152000, 'runtime_minutes': 148, 'rating': None, 'budget': 0}
+{'movie_title': 'The Leisure Seeker', 'domestic_total_gross': 3226443, 'runtime_minutes': 112, 'rating': 'R', 'budget': 0}
+{'movie_title': 'The Leisure Seeker', 'domestic_total_gross': 3226443, 'runtime_minutes': 112, 'rating': 'R', 'budget': 0}
+{'movie_title': 'The Sisters Brothers', 'domestic_total_gross': 3143056, 'runtime_minutes': 122, 'rating': 'R', 'budget': 0}
+{'movie_title': 'The Sisters Brothers', 'domestic_total_gross': 3143056, 'runtime_minutes': 122, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Thoroughbreds', 'domestic_total_gross': 3072605, 'runtime_minutes': 92, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Thoroughbreds', 'domestic_total_gross': 3072605, 'runtime_minutes': 92, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Whitney', 'domestic_total_gross': 3026351, 'runtime_minutes': None, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Whitney', 'domestic_total_gross': 3026351, 'runtime_minutes': None, 'rating': 'R', 'budget': 0}
+{'movie_title': 'American Animals', 'domestic_total_gross': 2856954, 'runtime_minutes': 116, 'rating': 'R', 'budget': 0}
+{'movie_title': 'American Animals', 'domestic_total_gross': 2856954, 'runtime_minutes': 116, 'rating': 'R', 'budget': 0}
+{'movie_title': 'God Bless the Broken Road', 'domestic_total_gross': 2846257, 'runtime_minutes': 111, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'God Bless the Broken Road', 'domestic_total_gross': 2846257, 'runtime_minutes': 111, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'La boda de Valentina', 'domestic_total_gross': 2783739, 'runtime_minutes': 107, 'rating': 'R', 'budget': 0}
+{'movie_title': 'La boda de Valentina', 'domestic_total_gross': 2783739, 'runtime_minutes': 107, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Bharath Ane Nenu', 'domestic_total_gross': 2663090, 'runtime_minutes': 173, 'rating': None, 'budget': 0}
+{'movie_title': 'Bharath Ane Nenu', 'domestic_total_gross': 2663090, 'runtime_minutes': 173, 'rating': None, 'budget': 0}
+{'movie_title': 'You Were Never Really Here', 'domestic_total_gross': 2528078, 'runtime_minutes': 89, 'rating': 'R', 'budget': 0}
+{'movie_title': 'You Were Never Really Here', 'domestic_total_gross': 2528078, 'runtime_minutes': 89, 'rating': 'R', 'budget': 0}
+{'movie_title': 'A Beautiful Planet', 'domestic_total_gross': 15650615, 'runtime_minutes': None, 'rating': None, 'budget': 0}
+{'movie_title': 'A Beautiful Planet', 'domestic_total_gross': 15650615, 'runtime_minutes': None, 'rating': None, 'budget': 0}
+{'movie_title': 'Suspiria', 'domestic_total_gross': 2483472, 'runtime_minutes': 152, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Suspiria', 'domestic_total_gross': 2483472, 'runtime_minutes': 152, 'rating': 'R', 'budget': 0}
+{'movie_title': 'The Rider', 'domestic_total_gross': 2419031, 'runtime_minutes': 104, 'rating': 'R', 'budget': 0}
+{'movie_title': 'The Rider', 'domestic_total_gross': 2419031, 'runtime_minutes': 104, 'rating': 'R', 'budget': 0}
+{'movie_title': "Mary and the Witch's Flower", 'domestic_total_gross': 2418404, 'runtime_minutes': 103, 'rating': 'PG', 'budget': 0}
+{'movie_title': "Mary and the Witch's Flower", 'domestic_total_gross': 2418404, 'runtime_minutes': 103, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Hearts Beat Loud', 'domestic_total_gross': 2386251, 'runtime_minutes': 97, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Hearts Beat Loud', 'domestic_total_gross': 2386251, 'runtime_minutes': 97, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': '1991', 'domestic_total_gross': 2342264, 'runtime_minutes': 141, 'rating': None, 'budget': 0}
+{'movie_title': '1991', 'domestic_total_gross': 2342264, 'runtime_minutes': 141, 'rating': None, 'budget': 0}
+{'movie_title': 'Papillon', 'domestic_total_gross': 2335896, 'runtime_minutes': 133, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Papillon', 'domestic_total_gross': 2335896, 'runtime_minutes': 133, 'rating': 'R', 'budget': 0}
+{'movie_title': "Daddy's Home 2", 'domestic_total_gross': 104029443, 'runtime_minutes': 100, 'rating': 'PG-13', 'budget': 69000000}
+{'movie_title': "Daddy's Home 2", 'domestic_total_gross': 104029443, 'runtime_minutes': 100, 'rating': 'PG-13', 'budget': 69000000}
+{'movie_title': 'Murder on the Orient Express', 'domestic_total_gross': 102826543, 'runtime_minutes': 114, 'rating': 'PG-13', 'budget': 55000000}
+{'movie_title': 'Murder on the Orient Express', 'domestic_total_gross': 102826543, 'runtime_minutes': 114, 'rating': 'PG-13', 'budget': 55000000}
+{'movie_title': 'If Beale Street Could Talk', 'domestic_total_gross': 14915773, 'runtime_minutes': 119, 'rating': 'R', 'budget': 0}
+{'movie_title': 'If Beale Street Could Talk', 'domestic_total_gross': 14915773, 'runtime_minutes': 119, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Simmba', 'domestic_total_gross': 5102129, 'runtime_minutes': 158, 'rating': None, 'budget': 0}
+{'movie_title': 'Simmba', 'domestic_total_gross': 5102129, 'runtime_minutes': 158, 'rating': None, 'budget': 0}
+{'movie_title': 'The Fall of the American Empire', 'domestic_total_gross': 2178460, 'runtime_minutes': 127, 'rating': 'R', 'budget': 0}
+{'movie_title': 'The Fall of the American Empire', 'domestic_total_gross': 2178460, 'runtime_minutes': 127, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Puzzle', 'domestic_total_gross': 2032018, 'runtime_minutes': 103, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Puzzle', 'domestic_total_gross': 2032018, 'runtime_minutes': 103, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Great Performances at the Met: Puccini: Tosca', 'domestic_total_gross': 2023749, 'runtime_minutes': 150, 'rating': None, 'budget': 0}
+{'movie_title': 'Great Performances at the Met: Puccini: Tosca', 'domestic_total_gross': 2023749, 'runtime_minutes': 150, 'rating': None, 'budget': 0}
+{'movie_title': 'A Fantastic Woman', 'domestic_total_gross': 2020988, 'runtime_minutes': 104, 'rating': 'R', 'budget': 0}
+{'movie_title': 'A Fantastic Woman', 'domestic_total_gross': 2020988, 'runtime_minutes': 104, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Pope Francis: A Man of His Word', 'domestic_total_gross': 2008385, 'runtime_minutes': 96, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Pope Francis: A Man of His Word', 'domestic_total_gross': 2008385, 'runtime_minutes': 96, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Assassination Nation', 'domestic_total_gross': 2005142, 'runtime_minutes': 108, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Assassination Nation', 'domestic_total_gross': 2005142, 'runtime_minutes': 108, 'rating': 'R', 'budget': 0}
+{'movie_title': 'The Front Runner', 'domestic_total_gross': 2000105, 'runtime_minutes': 113, 'rating': 'R', 'budget': 0}
+{'movie_title': 'The Front Runner', 'domestic_total_gross': 2000105, 'runtime_minutes': 113, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Detective Chinatown 2', 'domestic_total_gross': 1983984, 'runtime_minutes': 121, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Detective Chinatown 2', 'domestic_total_gross': 1983984, 'runtime_minutes': 121, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Great Performances at the Met: Verdi: La Traviata', 'domestic_total_gross': 1882931, 'runtime_minutes': 205, 'rating': None, 'budget': 0}
+{'movie_title': 'Great Performances at the Met: Verdi: La Traviata', 'domestic_total_gross': 1882931, 'runtime_minutes': 205, 'rating': None, 'budget': 0}
+{'movie_title': 'Ben Is Back', 'domestic_total_gross': 3703184, 'runtime_minutes': 103, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Ben Is Back', 'domestic_total_gross': 3703184, 'runtime_minutes': 103, 'rating': 'R', 'budget': 0}
+{'movie_title': "At Eternity's Gate", 'domestic_total_gross': 2294915, 'runtime_minutes': 111, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': "At Eternity's Gate", 'domestic_total_gross': 2294915, 'runtime_minutes': 111, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Moses', 'domestic_total_gross': 1807117, 'runtime_minutes': 130, 'rating': None, 'budget': 0}
+{'movie_title': 'Moses', 'domestic_total_gross': 1807117, 'runtime_minutes': 130, 'rating': None, 'budget': 0}
+{'movie_title': 'Great Performances at the Met: Puccini: La Bohème', 'domestic_total_gross': 1764201, 'runtime_minutes': 187, 'rating': None, 'budget': 0}
+{'movie_title': 'Great Performances at the Met: Puccini: La Bohème', 'domestic_total_gross': 1764201, 'runtime_minutes': 187, 'rating': None, 'budget': 0}
+{'movie_title': 'Race 3', 'domestic_total_gross': 1690861, 'runtime_minutes': 160, 'rating': None, 'budget': 0}
+{'movie_title': 'Race 3', 'domestic_total_gross': 1690861, 'runtime_minutes': 160, 'rating': None, 'budget': 0}
+{'movie_title': 'On the Basis of Sex', 'domestic_total_gross': 24622687, 'runtime_minutes': None, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'On the Basis of Sex', 'domestic_total_gross': 24622687, 'runtime_minutes': None, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Pad Man', 'domestic_total_gross': 1670192, 'runtime_minutes': 140, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Pad Man', 'domestic_total_gross': 1670192, 'runtime_minutes': 140, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'A Private War', 'domestic_total_gross': 1633208, 'runtime_minutes': 110, 'rating': 'R', 'budget': 0}
+{'movie_title': 'A Private War', 'domestic_total_gross': 1633208, 'runtime_minutes': 110, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Great Performances at the Met: Verdi: Aida', 'domestic_total_gross': 1595902, 'runtime_minutes': 225, 'rating': None, 'budget': 0}
+{'movie_title': 'Great Performances at the Met: Verdi: Aida', 'domestic_total_gross': 1595902, 'runtime_minutes': 225, 'rating': None, 'budget': 0}
+{'movie_title': 'The Bookshop', 'domestic_total_gross': 1588150, 'runtime_minutes': 113, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'The Bookshop', 'domestic_total_gross': 1588150, 'runtime_minutes': 113, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Operation Red Sea', 'domestic_total_gross': 1543547, 'runtime_minutes': 142, 'rating': None, 'budget': 0}
+{'movie_title': 'Operation Red Sea', 'domestic_total_gross': 1543547, 'runtime_minutes': 142, 'rating': None, 'budget': 0}
+{'movie_title': 'Thugs of Hindostan', 'domestic_total_gross': 1449848, 'runtime_minutes': 164, 'rating': None, 'budget': 0}
+{'movie_title': 'Thugs of Hindostan', 'domestic_total_gross': 1449848, 'runtime_minutes': 164, 'rating': None, 'budget': 0}
+{'movie_title': "Don't Worry, He Won't Get Far on Foot", 'domestic_total_gross': 1441705, 'runtime_minutes': 114, 'rating': 'R', 'budget': 0}
+{'movie_title': "Don't Worry, He Won't Get Far on Foot", 'domestic_total_gross': 1441705, 'runtime_minutes': 114, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Princess Mononoke 2018 Re', 'domestic_total_gross': 1423877, 'runtime_minutes': 134, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Princess Mononoke 2018 Re', 'domestic_total_gross': 1423877, 'runtime_minutes': 134, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Finding Your Feet', 'domestic_total_gross': 1418682, 'runtime_minutes': 111, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Finding Your Feet', 'domestic_total_gross': 1418682, 'runtime_minutes': 111, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Made for More', 'domestic_total_gross': 2999134, 'runtime_minutes': None, 'rating': None, 'budget': 0}
+{'movie_title': 'Made for More', 'domestic_total_gross': 2999134, 'runtime_minutes': None, 'rating': None, 'budget': 0}
+{'movie_title': 'Little Women', 'domestic_total_gross': 1379497, 'runtime_minutes': 112, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Little Women', 'domestic_total_gross': 1379497, 'runtime_minutes': 112, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Dunkirk 2017 Re', 'domestic_total_gross': 1695119, 'runtime_minutes': 106, 'rating': 'PG-13', 'budget': 100000000}
+{'movie_title': 'Dunkirk 2017 Re', 'domestic_total_gross': 1695119, 'runtime_minutes': 106, 'rating': 'PG-13', 'budget': 100000000}
+{'movie_title': '102 Not Out', 'domestic_total_gross': 1343797, 'runtime_minutes': 102, 'rating': 'PG', 'budget': 0}
+{'movie_title': '102 Not Out', 'domestic_total_gross': 1343797, 'runtime_minutes': 102, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Baaghi 2', 'domestic_total_gross': 1319579, 'runtime_minutes': 137, 'rating': None, 'budget': 0}
+{'movie_title': 'Baaghi 2', 'domestic_total_gross': 1319579, 'runtime_minutes': 137, 'rating': None, 'budget': 0}
+{'movie_title': 'Great Performances at the Met: Mozart: Così fan tutte', 'domestic_total_gross': 1302949, 'runtime_minutes': None, 'rating': None, 'budget': 0}
+{'movie_title': 'Great Performances at the Met: Mozart: Così fan tutte', 'domestic_total_gross': 1302949, 'runtime_minutes': None, 'rating': None, 'budget': 0}
+{'movie_title': 'McQueen', 'domestic_total_gross': 1257275, 'runtime_minutes': 111, 'rating': 'R', 'budget': 0}
+{'movie_title': 'McQueen', 'domestic_total_gross': 1257275, 'runtime_minutes': 111, 'rating': 'R', 'budget': 0}
+{'movie_title': 'The Seagull', 'domestic_total_gross': 1252960, 'runtime_minutes': 98, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'The Seagull', 'domestic_total_gross': 1252960, 'runtime_minutes': 98, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Great Performances at the Met: Massenet: Cendrillon', 'domestic_total_gross': 1243306, 'runtime_minutes': None, 'rating': None, 'budget': 0}
+{'movie_title': 'Great Performances at the Met: Massenet: Cendrillon', 'domestic_total_gross': 1243306, 'runtime_minutes': None, 'rating': None, 'budget': 0}
+{'movie_title': 'Racetime', 'domestic_total_gross': 1875283, 'runtime_minutes': 89, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Racetime', 'domestic_total_gross': 1875283, 'runtime_minutes': 89, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Shoplifters', 'domestic_total_gross': 3313513, 'runtime_minutes': 121, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Shoplifters', 'domestic_total_gross': 3313513, 'runtime_minutes': 121, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Mandy', 'domestic_total_gross': 1214525, 'runtime_minutes': 121, 'rating': None, 'budget': 0}
+{'movie_title': 'Mandy', 'domestic_total_gross': 1214525, 'runtime_minutes': 121, 'rating': None, 'budget': 0}
+{'movie_title': 'Maria By Callas 2018 Re', 'domestic_total_gross': 1267301, 'runtime_minutes': 119, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Maria By Callas 2018 Re', 'domestic_total_gross': 1267301, 'runtime_minutes': 119, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Grease 2018 Re', 'domestic_total_gross': 1213413, 'runtime_minutes': 110, 'rating': 'PG', 'budget': 6000000}
+{'movie_title': 'Grease 2018 Re', 'domestic_total_gross': 1213413, 'runtime_minutes': 110, 'rating': 'PG', 'budget': 6000000}
+{'movie_title': 'Beautifully Broken', 'domestic_total_gross': 1209645, 'runtime_minutes': 108, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'Beautifully Broken', 'domestic_total_gross': 1209645, 'runtime_minutes': 108, 'rating': 'PG-13', 'budget': 0}
+{'movie_title': 'An Interview with God', 'domestic_total_gross': 1201434, 'runtime_minutes': 97, 'rating': None, 'budget': 0}
+{'movie_title': 'An Interview with God', 'domestic_total_gross': 1201434, 'runtime_minutes': 97, 'rating': None, 'budget': 0}
+{'movie_title': 'Along With the Gods: The Last 49 Days', 'domestic_total_gross': 1200246, 'runtime_minutes': 142, 'rating': None, 'budget': 0}
+{'movie_title': 'Along With the Gods: The Last 49 Days', 'domestic_total_gross': 1200246, 'runtime_minutes': 142, 'rating': None, 'budget': 0}
+{'movie_title': 'Great Performances at the Met: Saint', 'domestic_total_gross': 1195758, 'runtime_minutes': 200, 'rating': None, 'budget': 0}
+{'movie_title': 'Great Performances at the Met: Saint', 'domestic_total_gross': 1195758, 'runtime_minutes': 200, 'rating': None, 'budget': 0}
+{'movie_title': 'Andhadhun', 'domestic_total_gross': 1193046, 'runtime_minutes': 139, 'rating': None, 'budget': 0}
+{'movie_title': 'Andhadhun', 'domestic_total_gross': 1193046, 'runtime_minutes': 139, 'rating': None, 'budget': 0}
+{'movie_title': 'Spirited Away 2018 Re', 'domestic_total_gross': 1175067, 'runtime_minutes': 125, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Spirited Away 2018 Re', 'domestic_total_gross': 1175067, 'runtime_minutes': 125, 'rating': 'PG', 'budget': 0}
+{'movie_title': 'Great Performances at the Met: Verdi: Luisa Miller', 'domestic_total_gross': 1166858, 'runtime_minutes': None, 'rating': None, 'budget': 0}
+{'movie_title': 'Great Performances at the Met: Verdi: Luisa Miller', 'domestic_total_gross': 1166858, 'runtime_minutes': None, 'rating': None, 'budget': 0}
+{'movie_title': 'Lean on Pete', 'domestic_total_gross': 1163056, 'runtime_minutes': 121, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Lean on Pete', 'domestic_total_gross': 1163056, 'runtime_minutes': 121, 'rating': 'R', 'budget': 0}
+{'movie_title': 'Along With the Gods: The Two Worlds', 'domestic_total_gross': 1908823, 'runtime_minutes': 139, 'rating': None, 'budget': 0}
+{'movie_title': 'Along With the Gods: The Two Worlds', 'domestic_total_gross': 1908823, 'runtime_minutes': 139, 'rating': None, 'budget': 0}
+{'movie_title': 'My Neighbor Totoro 2018 Re', 'domestic_total_gross': 1144649, 'runtime_minutes': 86, 'rating': None, 'budget': 0}
+{'movie_title': 'My Neighbor Totoro 2018 Re', 'domestic_total_gross': 1144649, 'runtime_minutes': 86, 'rating': None, 'budget': 0}
+{'movie_title': "Great Performances at the Met: Donizetti: L'Elisir d'Amore", 'domestic_total_gross': 1115018, 'runtime_minutes': None, 'rating': None, 'budget': 0}
+{'movie_title': "Great Performances at the Met: Donizetti: L'Elisir d'Amore", 'domestic_total_gross': 1115018, 'runtime_minutes': None, 'rating': None, 'budget': 0}"""

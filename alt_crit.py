@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import functions
 import random
 import numpy as np
-import movies
+import movies_2020
 
 from urllib.parse import urljoin
 from selenium import webdriver
